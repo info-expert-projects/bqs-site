@@ -1,0 +1,9 @@
+/cache/
+/libraries/
+/plugins/
+/themes/
+/.htaccess
+/config.php
+/favicon.ico
+/index.php
+/robots.txt
