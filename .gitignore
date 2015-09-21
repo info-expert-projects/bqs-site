@@ -7,3 +7,6 @@
 /index.php
 /robots.txt
 /deploy/
+.idea
+CHANGELOG.md
+LICENSE.md

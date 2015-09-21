@@ -1,4 +1,3 @@
-
 <a href="/" class="logo">Bitrix Quick Start</a>
 
 <div class="sticky left-nav-block">
@@ -21,20 +20,33 @@
 					<li {if $slugChild == 'structure'} class="active" {/if}>
 						<a href="{$.config.site_url}/documentation/structure">Структура</a>
 					</li>
-					<li {if $slugChild == 'less'} class="active" {/if}>
-						<a href="{$.config.site_url}/documentation/less">LESS код</a>
+				</ul>
+			</li>
+
+			<li {if $slug == 'code'} class="active" {/if}>
+				<a href="{$.config.site_url}/code">Организация кода</a>
+				<ul>
+					<li {if $slugChild == 'php'} class="active" {/if}>
+						<a href="{$.config.site_url}/code/php">PHP-код</a>
 					</li>
 					<li {if $slugChild == 'js'} class="active" {/if}>
-						<a href="{$.config.site_url}/documentation/js">JS код</a>
+						<a href="{$.config.site_url}/code/js">JS-код</a>
 					</li>
-					<li {if $slugChild == 'php'} class="active" {/if}>
-						<a href="{$.config.site_url}/documentation/php">PHP код</a>
+					<li {if $slugChild == 'css'} class="active" {/if}>
+						<a href="{$.config.site_url}/code/css">CSS-код</a>
 					</li>
-					<li {if $slugChild == 'other'} class="active" {/if}>
-						<a href="{$.config.site_url}/documentation/other">Прочее</a>
+					<li {if $slugChild == 'folders'} class="active" {/if}>
+						<a href="{$.config.site_url}/code/folders">Файлы и папки</a>
 					</li>
 				</ul>
 			</li>
+			<li {if $slug == 'git'} class="active" {/if}>
+				<a href="/git">Git</a>
+			</li>
+			<li {if $slug == 'blame'} class="active" {/if}>
+				<a href="/blame">Ответственность</a>
+			</li>
+
 			<li {if $slug == 'contributing'} class="active" {/if}>
 				<a href="{$.config.site_url}/contributing">Contributing</a>
 			</li>
