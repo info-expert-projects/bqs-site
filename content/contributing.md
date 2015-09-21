@@ -13,4 +13,4 @@ Template: index
 1. Идём в [репозиторий](https://github.com/pafnuty/bqs-site/). 
 2. Клонируем, редактируем и создаём нужные файлы.
 3. Делаем pull-request в ветку dev.
-4. Profit!
+4. **Profit!**
