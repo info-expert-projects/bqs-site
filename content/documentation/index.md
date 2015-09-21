@@ -5,20 +5,14 @@ Robots: index,follow
 
 ----
 
-- [История изменений](https://github.com/pafnuty/quickstart/blob/master/CHANGELOG.md)
+# Документация
+
+<div class="tip">
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/index.md" class="btn btn-small" target="_blank">Редактировать</a>
+</div>
 
 
 
-
-
-# Структура и назначение файлов быстрого старта вёрстки (папка verstka)
-```md
-verstka/ 
-├── cn_autoloader_verstka.php
-├── footer.php
-├── header.php
-└── index.php
-```
 
 ### verstka/
 - Содержимое этой папки следует распаковвывать в корень сайта на этапе создания чистой вёрстки.

@@ -29,7 +29,7 @@
 				<div class="content">
 					<div class="col col-mb-hide col-hide col-dt-3">
 						<div class="sidebar equal">
-							{insert 'sidebar.tpl'}
+							{include 'sidebar.tpl'}
 						</div>
 					</div> <!-- .col col-mb-hide col-hide col-dt-3 -->
 					<div class="col col-mb-12 col-dt-9 equal col-padding-bottom">

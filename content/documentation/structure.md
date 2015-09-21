@@ -5,7 +5,12 @@ Robots: index,follow
 
 ----
 
+
 # Структура и назначение файлов Bitrix Quick Start
+
+<div class="tip">
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/structure.md" class="btn btn-small" target="_blank">Редактировать</a>
+</div>
 
 Разработку сайта на Bitrix, актуальной версии следует производить в папке local. [Читаем для чего и зачем нужна папка local](http://dev.1c-bitrix.ru/community/blogs/vad/local-folder.php).
 
