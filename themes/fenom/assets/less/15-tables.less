@@ -1,0 +1,120 @@
+/* ==========================================================================
+	 TABLES */
+/* ========================================================================== */
+
+	table {
+		max-width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	.table {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.table th,
+	.table td {
+		padding: 10px;
+		line-height: 20px;
+		text-align: left;
+		vertical-align: top;
+		border-top: 1px solid @gray;
+	}
+	.table th {
+		font-weight: bold;
+		background: lighten(@gray, 4%);
+	}
+
+	.table thead th {
+		vertical-align: bottom;
+	}
+	.table caption + thead tr:first-child th,
+	.table caption + thead tr:first-child td,
+	.table colgroup + thead tr:first-child th,
+	.table colgroup + thead tr:first-child td,
+	.table thead:first-child tr:first-child th,
+	.table thead:first-child tr:first-child td {
+		border-top: 0;
+	}
+	.table tbody + tbody {
+		border-top: 2px solid @gray;
+	}
+	.table .table {
+		background-color: lighten(@gray, 3%);
+	}
+	.table-bordered {
+		border: 1px solid @gray;
+		border-collapse: separate;
+		border-left: 0;
+
+		th,
+		td {
+			border-left: 1px solid @gray;
+		}
+
+		caption + thead tr:first-child th,
+		caption + tbody tr:first-child th,
+		caption + tbody tr:first-child td,
+		colgroup + thead tr:first-child th,
+		colgroup + tbody tr:first-child th,
+		colgroup + tbody tr:first-child td,
+		thead:first-child tr:first-child th,
+		tbody:first-child tr:first-child th,
+		tbody:first-child tr:first-child td {
+			border-top: 0;
+		}
+		tbody + tbody {
+			tr:first-child {
+				td {
+					border-top: solid 2px @gray;
+				}
+			}
+		}
+	}
+
+
+	.table-striped {
+		tbody > tr:nth-child(even) > td,
+		tbody > tr:nth-child(even) > th {
+			background-color: fadeout(@black, 90%);
+			.primary-box &,
+			.secondary-box & {
+				background-color: fadeout(@white, 80%);
+			}
+		}
+
+	}
+	.table-hover {
+		tr:hover {
+			> th,
+			> td {
+				background-color: lighten(@gray, 3%);
+			}
+			
+		}
+		
+	}
+
+	.table-noborder {
+		th,
+		td {
+			border: 0;
+			padding: 8px;
+
+			p {
+				&:first-child {
+					margin-top: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
