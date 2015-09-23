@@ -40,9 +40,15 @@
 					</li>
 				</ul>
 			</li>
+			
 			<li {if $slug == 'git'} class="active" {/if}>
 				<a href="/git">Git</a>
 			</li>
+			
+			<li {if $slug == 'frontend'} class="active" {/if}>
+				<a href="/frontend">Вёрстка собственных проектов</a>
+			</li>
+
 			<li {if $slug == 'blame'} class="active" {/if}>
 				<a href="/blame">Ответственность</a>
 			</li>
