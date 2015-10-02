@@ -12,6 +12,7 @@ Template: index
 </div>
 
 ## Комментирование кода
+Комментироване LESS кода — его неотъемлимая часть. Без комментариев разобраться в чужом коде порой просто невозможно. 
 ```less
     /* =================================================
        Каталог */
@@ -44,7 +45,27 @@ Template: index
 
 
 ## Стиль LESS (и CSS) кода: 
-- **Основной стиль «лесенкой»**, где каждое свойство отдельная строка.
+### Основной стиль «лесенкой»
+Каждое свойство отдельная строка.
+<div class="content">
+    <div class="col col-mb-12 col-6">
+        <div class="text-error h4">Неправильно</div>        
+        <pre><code class="language-less hljs">.normal {font-weight: normal; font-style: normal; text-decoration: none;}</code></pre>        
+    </div>
+    <div class="col col-mb-12 col-6">
+        <div class="text-success h4">Правильно</div>
+        <pre><code class="language-less hljs">.normal {
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+
+    &:hover {
+        color: red;
+    }
+}
+        </code></pre>
+    </div>
+</div>
 - **Для визуального отделения используется табулятор**, но не пробел.
 - **Группы свойств перечисляемых через запятую, располагаются в отдельной строке.**
 - **Все «подправила» оформляются по тем же правилам, что и «основные».**

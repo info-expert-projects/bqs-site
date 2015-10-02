@@ -9,7 +9,7 @@
 		
 		{Morfy::factory()->runAction('theme_meta')}
 
-		<link rel="shortcut icon" href="{$site_url}/favicon.ico?v=1">
+		<link rel="shortcut icon" href="{$.config.site_url}/favicon.ico?v=1">
 
 		<title>{$title}{if Morfy::factory()->getUriSegment(0) != ''} | {$.config.site_title}{/if}</title>
 
