@@ -1,9 +1,10 @@
 /cache/
+/config/
 /libraries/
 /plugins/
+/themes/default/
 /.htaccess
 /config.php
-/favicon.ico
 /index.php
 /robots.txt
 /deploy/
