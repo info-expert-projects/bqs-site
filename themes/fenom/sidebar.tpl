@@ -29,6 +29,9 @@
 					<li {if $slugChild == 'php'} class="active" {/if}>
 						<a href="{$.config.site_url}/code/php">PHP-код</a>
 					</li>
+					<li {if $slugChild == 'html'} class="active" {/if}>
+						<a href="{$.config.site_url}/code/html">HTML код</a>
+					</li>
 					<li {if $slugChild == 'js'} class="active" {/if}>
 						<a href="{$.config.site_url}/code/js">JS-код</a>
 					</li>
@@ -43,10 +46,6 @@
 			
 			<li {if $slug == 'git'} class="active" {/if}>
 				<a href="/git">Git</a>
-			</li>
-			
-			<li {if $slug == 'frontend'} class="active" {/if}>
-				<a href="/frontend">Вёрстка собственных проектов</a>
 			</li>
 
 			<li {if $slug == 'blame'} class="active" {/if}>
