@@ -33,7 +33,7 @@
 						<a href="{$.config.site_url}/code/js">JS-код</a>
 					</li>
 					<li {if $slugChild == 'css'} class="active" {/if}>
-						<a href="{$.config.site_url}/code/css">CSS-код</a>
+						<a href="{$.config.site_url}/code/css">LESS и CSS код</a>
 					</li>
 					<li {if $slugChild == 'folders'} class="active" {/if}>
 						<a href="{$.config.site_url}/code/folders">Файлы и папки</a>

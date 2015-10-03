@@ -441,9 +441,23 @@
 
 	}
 
+	.error-block {
+		background: fadeout(@error, 80%);
+		color: @error;
+	}
+
+	.info-block {
+		background: fadeout(@primary, 80%);
+	}
+
+	.success-block {
+		background: fadeout(@success, 80%);
+		color: darken(@success, 10%);
+	}
+
 	.tip {
 		padding: 20px;
-		background: fadeout(@primary, 80%);
+		.info-block;
 		color: @textLight;
 		font-style: italic;
 	}
