@@ -10,6 +10,11 @@ Template: index
     :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
+<div class="alert fz18 mt20">
+    Основной принцип — код должен выглядеть так, как будто его писал один человек, независимо от количества авторов!
+</div>
+
 ## [PHP-код](/code/php)
+## [HTML-код](/code/html)
 ## [JS-код](/code/js)
-## [CSS-код](/code/css)
+## [LESS-код](/code/css)
