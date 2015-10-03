@@ -28,7 +28,32 @@ jQuery(document).ready(function($) {
 	// Одинаковая высота блоков
 	$('.equal').matchHeight();
 
+	// Липкий блок
 	$(".sticky").stick_in_parent();
+
+	$.simpleMobileNav({
+		navBlock: '.left-nav',
+		navContainer: '.mobile-nav',
+		navWrapper: '.mobile-nav-wrapper',
+		// Колбэки раскомментировать при необходимости
+		onInit: function (nav) {
+			console.log($(nav).html());
+			var $ul = $(nav).find('.left-nav');
+
+			$ul.removeClass('left-nav');
+		},
+		// onNavToggle: function (nav) {
+		// 	console.log('onNavToggle: ', this, nav);
+		// },
+		// beforeNavOpen: function (nav) {
+			// console.log('beforeNavOpen: ', this, nav);
+		// },
+		// beforeNavClose: function (nav) {
+		// 	console.log('beforeNavClose: ', this, nav);
+		// }
+	});
+
+
 });
 
 // Эмодзи в тексте
