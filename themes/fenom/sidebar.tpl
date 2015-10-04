@@ -20,6 +20,10 @@
 					<li {if $slugChild == 'structure'} class="active" {/if}>
 						<a href="{$.config.site_url}/documentation/structure">Структура</a>
 					</li>
+					<li {if $slugChild == 'less'} class="active" {/if}>
+						<a href="{$.config.site_url}/documentation/less">LESS</a>
+					</li>
+
 				</ul>
 			</li>
 
