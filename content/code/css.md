@@ -245,6 +245,9 @@ Template: index
 - Для дробных значений не обязательно писать ноль.
 - В url() не обязательно ставить кавычки, однако если используется base64-строка — кавычки ставим в обязательном порядке.
 - Составные свойства (например, padding, margin) группируем в одно по взможности.
+- Не добавляйте пробелы после запятых в rgba(), rgb() и т.п.
+- Цвет в формате HEX пишем в нижнем регистре `#fff`, '#f94568'.
+- Ни при каких обстоятельствах не используем `@import` в CSS-файлах!
 
 <div class="content">
 	<div class="col col-mb-12 col-6 col-bad">
@@ -252,7 +255,7 @@ Template: index
 		<div class="error-block p20 equal">
 			<pre><code class="nohighlight">.class,.class1,.class2,.class3{
 	color: red
-	&, &.mod {padding:10px;display:block}}
+	&, &.mod {padding:10px;display:block;color:#FFFFFF}}
 .class1
 {
   color:@back;
@@ -277,14 +280,15 @@ Template: index
 	&.mod {
 		padding: 10px;
 		display: block;
+		color: #fff;
 	}
 }
 .class1 {
   color: @back;
   background: @white;
   padding: 0;
-  -webkit-box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: inset 0 0 0 2px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.5);
 }</code></pre>
 		</div>
 	</div>
