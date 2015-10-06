@@ -21,6 +21,7 @@
 	border-radius: 3px;
 	.user-select();
 	.transition;
+	.box-sizing;
 
 	&:focus {
 		.tab-focus();
@@ -47,29 +48,61 @@
 		opacity: .65;
 	}
 
-	// Приер квадратной кнопки
-	&-square {
-		border-radius: 0;
-	} //.btn-square
-
-	// Пример тёмной кнопки
-	&-dark {
-		background: fadeout(@black, 70%);
+	// Пример кастомизации кнопки
+	&-primary {
+		background: @primary;
 		color: @white;
 
 		&:hover,
 		&:focus {
 			color: @white;
-			background: fadeout(@black, 50%);
+			background: darken(@primary, 10%);
 			text-decoration: none;
 		}
 
 		&:active,
 		&.active {
 			color: @white;
-			background: fadeout(@black, 30%);
+			background: darken(@primary, 20%);
 		}
-	} //.btn-dark
+	} //.btn-primary
+
+	&-secondary {
+		background: @secondary;
+		color: @white;
+
+		&:hover,
+		&:focus {
+			color: @white;
+			background: darken(@secondary, 10%);
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			color: @white;
+			background: darken(@secondary, 20%);
+		}
+	} //.btn-secondary
+
+	&-additional {
+		background: @additional;
+		color: @textDark;
+
+		&:hover,
+		&:focus {
+			color: @textDark;
+			background: darken(@additional, 10%);
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			color: @textDark;
+			background: darken(@additional, 20%);
+		}
+	} //.btn-additional
+
 
 
 	// Блочные кнопки
@@ -90,6 +123,10 @@
 	} // .btn-block
 
 
+	// Пример квадратной кнопки
+	&-square {
+		border-radius: 0;
+	} //.btn-square
 
 	// Кнопки-ссылки
 	&-link {
@@ -125,34 +162,7 @@
 		}
 	} //.btn-link
 	
-
-	&-pager {
-		height: @inputHeight - 10;
-		font: normal 12px @sans;
-		line-height: @inputHeight - 10;
-		padding: 0 8px;
-		min-width: 15px;
-
-		&.active {
-			cursor: default;
-		}
-	} //.btn-pager
-
-	&-success {
-		background-color: @success;
-
-		&:hover,
-		&:focus {
-			background-color: @additional;
-		}
-
-		&:active,
-		&.active {
-			background: darken(@success, 10%);
-		}
-	} //.btn-success
-
-
+	// Размеры кнопок
 	&-small {
 		height: @inputHeight - 4;
 		font: normal 14px @sans;
@@ -167,14 +177,6 @@
 		line-height: @inputHeight - 12;
 		padding: 0 10px;
 	} //.btn-mini
-
-	&-like {
-		height: @inputHeight - 8;
-		font: normal 14px @sans;
-		line-height: @inputHeight - 8;
-		padding: 0 10px;
-		// min-width: 15px;
-	} //.btn-like
 
 	&-outline {
 		background-color: transparent;
@@ -194,25 +196,6 @@
 			background: @btnHoverBackground;
 			border-color: @btnHoverBackground;
 		}
-
-		&.btn-success {
-			color: @success;
-			border: solid 1px @success;
-
-			&:hover,
-			&:focus {
-				color: @white;
-				background: @success;
-				text-decoration: none;
-			}
-
-			&:active,
-			&.active {
-				color: @white;
-				background: fadeout(@success, 10%);
-				border-color: fadeout(@success, 10%);
-			}
-		} //.btn-success
 	} //.btn-outline
 	
 
