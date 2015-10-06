@@ -8,7 +8,7 @@ Robots: index,follow
 # Документация
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/css/index.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 ### Навигация по компонентам

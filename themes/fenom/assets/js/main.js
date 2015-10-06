@@ -37,7 +37,6 @@ jQuery(document).ready(function($) {
 		navWrapper: '.mobile-nav-wrapper',
 		// Колбэки раскомментировать при необходимости
 		onInit: function (nav) {
-			console.log($(nav).html());
 			var $ul = $(nav).find('.left-nav');
 
 			$ul.removeClass('left-nav');

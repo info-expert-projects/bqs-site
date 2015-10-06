@@ -56,7 +56,7 @@
 			<footer class="container">
 				<div class="content">
 					<div class="col col-mb-12 ta-right">
-						<p class="text-muted mb0">Работает на <a href="http://morfy.org/" target="_blank">Morfy</a> и <a href="https://github.com/fenom-template/fenom" target="_blank">Fenom Template Engine</a>.</p>
+						<p class="text-muted mb0">Работает на <a href="http://morfy.org/" target="_blank">Morfy</a></p>
 					</div>
 				</div>
 			</footer>
