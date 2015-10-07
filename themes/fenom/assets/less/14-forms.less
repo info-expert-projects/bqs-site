@@ -47,9 +47,12 @@
 		} //.input[type="color"]
 
 		&-required,
-		&:required {
-			border-color: @warning;
-		} //.input-required, [required]
+		&[required] {
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAI5JREFUeNpi/P//PwM1ARMDlcGogaMGkgEYdysrEK3Y5c59klzoC8T7gPgzFIPYPuR6uQWINwGxIxDzQDGIvRkqR5KBIFdU41FTDXU90QYWEaGukBQDTYhQZ0LtZMNIioFniFB3mhQD+4lQ10+KgaCk0YpHTStUDUlhWAPE/kC8H4i/QjGI7QeVIxoABBgA0UkaIFtFpqkAAAAASUVORK5CYII=');
+			background-size: 10px 10px;
+			background-repeat: no-repeat;
+			background-position: 100% 0;
+		} //.input-required
 		
 		&.disabled,
 		&-disabled,
@@ -85,40 +88,42 @@
 
 			> span {
 				display: inline-block;
-				width: 16px;
-				height: 16px;
+				width: 18px;
+				height: 18px;
 				margin: -2px 4px 0 0;
 				vertical-align: middle;
 				background:  @white;
 				cursor: pointer;
-				border: solid 1px @primary;
+				border: solid 1px @secondary;
 				border-radius: 3px;
 				position: relative;
 			}
 			&:hover {
+				color: @primary;
 				> span {
-					border-color: @secondary;
+					border-color: @primary;
 				}
 			}
 		}
 
 		&:checked + label > span {
-			border-color: @secondary;
+			border-color: @primary;
 
 			&:before {
 				content: ' ';
 				position: absolute;
-				border: solid @secondary;
+				border: solid @primary;
 				border-width: 0 0 2px 2px;
-				height: 4px;
+				height: 5px;
 				width: 8px;
-				left: 3px;
-				top: 3px;
+				left: 4px;
+				top: 4px;
+				border-radius: 0 0 0 3px;
 				.rotate;
 			}
 		}
 		&:focus + label > span {
-			border-color: @secondary;
+			border-color: @primary;
 		}
 		&:focus + label {
 			color: @primary;
@@ -169,20 +174,20 @@
 				vertical-align: middle;
 				background:  @white;
 				cursor: pointer;
-				border: solid 2px @textDark;
+				border: solid 1px @secondary;
 				position: relative;
 				.border-radius(10px);
 			}
 			&:hover,
 			&:focus {
 				> span {
-					border-color: @textDark;
+					border-color: @secondary;
 				}
 			}
 		}
 
 		&:checked + label > span {
-			border-color: @textDark;
+			border-color: @primary;
 
 			&:before {
 				content: ' ';

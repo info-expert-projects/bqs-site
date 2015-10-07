@@ -115,47 +115,44 @@ body {
 		cursor: pointer;
 	}
 
+
 	h1, .h1 {
-		margin-top: 0;
-		font: normal 20px @sans;
-		line-height: 1.4;
+		margin: 0 0 1em 0;
+		font: normal 22px/1.4 @sans;
 		
 		@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
 			font-size: 22px;
 		}
-		@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
-			font-size: 24px;
-		}
-		@media (min-width: @screenLarge) {
+		@media (min-width: @screenDesktop) {
 			font-size: 26px;
 		}
 	}
 
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		margin: 1em 0;
+	}
+
 	h2, .h2 {
-		font: normal 16px @sans;
-		line-height: 1.4;
+		font: normal 18px/1.4 @sans;
 		
 		@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
 			font-size: 20px;
 		}
-		@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
-			font-size: 22px;
-		}
-		@media (min-width: @screenLarge) {
+		@media (min-width: @screenDesktop) {
 			font-size: 24px;
 		}
 	}
 	h3, .h3 {
-		font: normal @baseFontSize @sans;
-		line-height: 1.4;
+		font: normal @baseFontSize/1.4 @sans;
 		
 		@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
-			font-size: @baseFontSize + 2px;
-		}
-		@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
 			font-size: @baseFontSize + 4px;
 		}
-		@media (min-width: @screenLarge) {
+		@media (min-width: @screenDesktop) {
 			font-size: @baseFontSize + 6px;
 		}
 	}
@@ -174,24 +171,21 @@ body {
 		}
 	}
 	h4, .h4 {
-		font: normal @baseFontSize @sans;
-		line-height: 1.4;
+		font: normal @baseFontSize/1.4 @sans;
 		
 		@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
-			font-size: @baseFontSize + 1px;
-		}
-		@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
 			font-size: @baseFontSize + 2px;
 		}
-		@media (min-width: @screenLarge) {
+		@media (min-width: @screenDesktop) {
 			font-size: @baseFontSize + 4px;
 		}
 	}
+	
 	h5, .h5 {
-
+		font: bold 16px/20px @sans;
 	}
 	h6, .h6 {
-
+		font: bold 14px/18px @sans;
 	}
 
 	h1, .h1,
