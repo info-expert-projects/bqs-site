@@ -100,7 +100,152 @@ Robots: index,follow
 </div>
 
 
+---
+### [Инпуты](#inputs){#inputs}
+---
+
+```html
+<input class="input" type="text">
+<textarea class="input"></textarea>
+```
+
+<div class="content">
+	<div class="col col-mb-12">
+	
+		<form>
+			<input class="input mr10" type="text" value=".input">
+			<input class="input mr10" disabled="" type="text" value=".input disabled">
+			<input class="input mr10" required="" type="text" value=".input required">
+	
+			<input class="input input-block" type="text" value=".input.input-block">
+	
+			<textarea class="input">.input</textarea>
+			<textarea class="input input-block">.input.input-block</textarea>
+	
+			<span class="col-2 d-ib ta-right pr20">checkbox2:</span>
+			<input class="checkbox" type="checkbox" value="checkbox2" id="checkbox2" name="ckbx2">
+			<label for="checkbox2">
+				<span></span>
+				checkbox2
+			</label>
+			<br>
+			<span class="col-2 d-ib ta-right pr20">radio3:</span>
+			<input class="radio" type="radio" value="radio" id="radio3" name="radio2">
+			<label for="radio3">
+				<span></span>
+				radio3
+			</label>
+			<br>
+			<span class="col-2 d-ib ta-right pr20">radio4:</span>
+			<input class="radio" type="radio" value="radio" id="radio4" name="radio2">
+			<label for="radio4">
+				<span></span>
+				radio4
+			</label>
+			<p> </p>
+			<span class="col-2 d-ib ta-right pr20">email:</span>
+			<input class="input" type="email" value="email">
+			<br>
+			<span class="col-2 d-ib ta-right pr20">number:</span>
+			<input class="input" type="number" value="number">
+			<br>
+			<span class="col-2 d-ib ta-right pr20">password:</span>
+			<input class="input" type="password" value="password">
+			<br>
+			<span class="col-2 d-ib ta-right pr20">search:</span>
+			<input class="input" type="search" value="search">
+			<br>
+			<span class="col-2 d-ib ta-right pr20">text:</span>
+			<input class="input" type="text" value="text">
+			<br></form>
+	</div>
+</div>
 
 
+---
+### [Селекты](#selects){#selects}
+---
+
+```html
+<select class="styler">
+	<option value="1">Далеко-далеко за.</option>
+	<option value="2">Не, пор?</option>
+</select>
+```
+
+<div class="content">
+	<div class="col col-mb-12">
+		<form>
+			<p>
+				<span class="col-2">.styler</span>
+		
+				<select class="styler mr10">
+					<option value="1">Далеко-далеко за.</option>
+					<option value="2">Не, пор?</option>
+					<option value="3">Запятой, на берегу!</option>
+					<option value="4">Ведущими, послушавшись?</option>
+					<option value="5">Имени, журчит.</option>
+				</select>
+				<select class="styler col-3 mr10">
+					<option value="01">Далеко-далеко за.</option>
+					<option value="02">Скатился, последний.</option>
+					<option value="03">Сих, взобравшись?</option>
+					<option value="04">От всех, семь.</option>
+					<option value="05">Вершину, свою.</option>
+					<option value="06">Однажды, подпоясал!</option>
+					<option value="07">Единственное, наш.</option>
+					<option value="08">Текст, заглавных.</option>
+					<option value="09">Злых, до!</option>
+					<option value="10">Знаках, заголовок.</option>
+					<option value="11">Путь, однажды.</option>
+					<option value="12">Деревни, ему!</option>
+					<option value="13">Власти, там?</option>
+					<option value="14">Это, рыбными.</option>
+					<option value="15">Дороге, встретил.</option>
+					<option value="16">Ты, взобравшись.</option>
+					<option value="17">Однажды, заголовок.</option>
+					<option value="18">Своего, семь.</option>
+					<option value="19">Власти, свой.</option>
+					<option value="20">Алфавит, но.</option>
+					<option value="21">Далеко-далеко за словесными горами в стране.</option>
+				</select>
+				<select class="styler" disabled>
+					<option value="1">Далеко-далеко</option>
+				</select>
+			</p>
+		
+			<p>
+				<span class="col-2">.input</span>
+		
+				<select class="input">
+					<option value="1">Далеко-далеко за.</option>
+					<option value="2">Не, пор?</option>
+					<option value="3">Запятой, на берегу!</option>
+					<option value="4">Ведущими, послушавшись?</option>
+					<option value="5">Имени, журчит.</option>
+				</select>
+			</p>
+		</form>
+	</div>
+</div>
 
 
+---
+### [Алерты](#alerts){#alerts}
+---
+
+```html
+<p class="alert">alert</p>
+<p class="alert alert-info">alert-info</p>
+<p class="alert alert-error">alert-error</p>
+<p class="alert alert-success">alert-success</p>
+```
+
+<div class="content">
+	<div class="col col-mb-12">
+		<p class="alert">alert</p>
+		<p class="alert alert-info">alert-info</p>
+		<p class="alert alert-error">alert-error</p>
+		<p class="alert alert-success">alert-success</p>
+	</div>
+</div>

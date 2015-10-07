@@ -52,6 +52,15 @@ jQuery(document).ready(function($) {
 		// }
 	});
 
+	// Стилизация селектов
+	$('.styler').styler({
+		selectSearch: true,
+		selectSearchLimit: 20,
+		onSelectOpened: function() {
+			// к открытому применяем плагин стилизации скроллбара
+			// $(this).find('ul').perfectScrollbar();
+		}
+	});
 
 });
 

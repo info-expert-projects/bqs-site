@@ -75,6 +75,7 @@
 		<script src="{$.config.site_url}/themes/{$.config.site_theme}/assets/js/emojify.min.js"></script>
 		<script src="{$.config.site_url}/themes/{$.config.site_theme}/assets/js/stickykit.min.js"></script>
 		<script src="{$.config.site_url}/themes/{$.config.site_theme}/assets/js/jquery.mobileNav.min.js"></script>
+		<script src="{$.config.site_url}/themes/{$.config.site_theme}/assets/js/jquery.formstyler.min.js"></script>
 		<script src="{$.config.site_url}/themes/{$.config.site_theme}/assets/js/main.js"></script>
 		<script>
 			hljs.initHighlightingOnLoad();
