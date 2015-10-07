@@ -15,6 +15,7 @@ Robots: index,follow
 - [Переменные](/documentation/less/variables)
 - [Миксины](/documentation/less/mixins)
 - [Сетка](/documentation/less/grid)
+- [Типографика](/documentation/less/typography)
 - [UI (кнопки, формы, иконки)](/documentation/less/ui)
 - [Таблицы](/documentation/less/tables)
 - [Helpers](/documentation/less/helpers)
