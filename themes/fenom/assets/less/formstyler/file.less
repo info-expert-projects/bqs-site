@@ -3,8 +3,9 @@
 /* ========================================================================== */
 	
 	.jq-file {
-		width: @fileWidth;
+		// width: @fileWidth;
 		border-radius: @radius;
+		margin-bottom: 10px;
 		
 		input {
 			cursor: pointer;
@@ -20,6 +21,7 @@
 		&:hover .jq-file__name,
 		&:active .jq-file__name {
 			border-color: @bgColorHover;
+			color: @bgColorHover;
 		}
 
 		&.disabled {
@@ -56,12 +58,13 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
-		border: solid 2px @bgColor;
+		border: solid 1px @bgColor;
 		border-radius: @radius;
 
 
 		.focused & {
 			border-color: @bgColorHover;
+			color: @bgColorHover;
 		}
 	
 	}
@@ -70,11 +73,15 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		color: @lightColor;
+		color: @white;
 		font: @fz~"/"(@inputHeight) @ff;
 		padding: 0 10px;
-		border-left: solid 2px @bgColor;
+		// border-left: solid 2px @bgColor;
 		border-radius: 0 @radius @radius 0;
 		background: @bgColor;
-
+		
+		.focused & {
+			color: @white;
+			background: @bgColorHover;
+		}
 	}

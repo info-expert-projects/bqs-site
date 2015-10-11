@@ -6,10 +6,8 @@ Robots: index,follow
 ----
 
 # UI
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/ui.md" class="btn btn-mini" target="_blank">Редактировать</a>
 
-<div class="tip">
-	:construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/ui.md" class="btn btn-small" target="_blank">Редактировать</a>
-</div>
 
 На этой странице даны примеры UI-элементов, уже готовых для использования.
 
@@ -107,6 +105,12 @@ Robots: index,follow
 ```html
 <input class="input" type="text">
 <textarea class="input"></textarea>
+
+<input type="checkbox" class="checkbox" id="checkbox1" name="checkbox1">
+<label for="checkbox1"><span></span> checkbox1</label>
+
+<input type="radio" class="radio" id="radio1" name="radio1">
+<label for="radio1"><span></span> checkbox1</label>
 ```
 
 <div class="content">
@@ -157,7 +161,44 @@ Robots: index,follow
 			<br>
 			<span class="col-2 d-ib ta-right pr20">text:</span>
 			<input class="input" type="text" value="text">
-			<br></form>
+		</form>
+	</div>
+</div>
+
+---
+### [Файловые инпуты](#inputfile){#inputfile}
+---
+
+```html
+<input class="input" type="file">
+<input class="input" type="file" multiple>
+<input class="styler" type="file">
+<input class="styler" type="file" multiple data-placeholder="Выберите файлы">
+```
+<div class="content">
+	<div class="col col-mb-12">
+		<form>
+			<div class="content">
+				<div class="col col-mb-12 col-2">
+					<b>.input</b>
+				</div>
+				<div class="col col-mb-12 col-10">
+					<input class="input" type="file">
+					<br>
+					<input class="input" type="file" multiple>
+				</div>
+			</div>
+			<div class="content">
+				<div class="col col-mb-12 col-2">
+					<b>.styler</b>
+				</div>
+				<div class="col col-mb-12 col-10">
+					<input class="styler col-4" type="file">
+					<br>
+					<input class="styler col-4" type="file" multeple>
+				</div>
+			</div>
+		</form>
 	</div>
 </div>
 
@@ -218,6 +259,16 @@ Robots: index,follow
 				<span class="col-2">.input</span>
 		
 				<select class="input">
+					<option value="1">Далеко-далеко за.</option>
+					<option value="2">Не, пор?</option>
+					<option value="3">Запятой, на берегу!</option>
+					<option value="4">Ведущими, послушавшись?</option>
+					<option value="5">Имени, журчит.</option>
+				</select>
+			</p>
+			<p>
+				<span class="col-2">.input[multiple]</span>
+				<select class="input" multiple>
 					<option value="1">Далеко-далеко за.</option>
 					<option value="2">Не, пор?</option>
 					<option value="3">Запятой, на берегу!</option>
