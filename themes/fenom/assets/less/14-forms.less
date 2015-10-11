@@ -34,7 +34,18 @@
 			padding: 0;
 			cursor: pointer;
 			-webkit-appearance: menulist;
+
+			&[multiple],
+			&.multiple {
+				-webkit-appearance: none;
+				height: auto;
+			} // select.input[multiple], select.input.multiple
+
 		} // select.input
+
+		&[type="file"] {
+			padding: 7px 10px;
+		} //.input[type="file"]
 
 		&[type="number"],
 		&[type="date"],
@@ -69,12 +80,13 @@
 			min-height: 150px;
 		} //.input-editor
 
+		&-block {
+			width: 100%;
+		} //.input-block
+
 	} //.input
 	
-	.input-block-level,
-	.input-block {
-		width: 100%;
-	}
+
 
 	.checkbox {
 		position: absolute;
