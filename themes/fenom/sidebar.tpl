@@ -14,9 +14,6 @@
 			<li {if $slug == 'documentation'} class="active" {/if}>
 				<a href="{$.config.site_url}/documentation">Документация</a>
 				<ul>
-					<li {if $slugChild == 'overview'} class="active" {/if}>
-						<a href="{$.config.site_url}/documentation/overview">Обзор</a>
-					</li>
 					<li {if $slugChild == 'structure'} class="active" {/if}>
 						<a href="{$.config.site_url}/documentation/structure">Структура</a>
 					</li>
