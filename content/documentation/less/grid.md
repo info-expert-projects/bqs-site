@@ -8,9 +8,8 @@ Template: grid
 
 # Сетка Быстрого старта
 
-<div class="tip">
-	:construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/grid.md" class="btn btn-small" target="_blank">Редактировать</a>
-</div>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/grid.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+
 
 
 ---
