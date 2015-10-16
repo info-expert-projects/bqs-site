@@ -20,7 +20,7 @@ Template: index
 
 - Для более эффективной организации работы следует использовать набор [Быстрый старт](https://github.com/pafnuty/quickstart). Он полностью соответствует требованиям данного документа.
 - В качестве отступов используем табуляцию (а не пробелы). Вложенные блоки должны отделяться одним отступом.
-- Docktype по умолчанию: **html5** `<!DOCTYPE html>`. 
+- DOCTYPE по умолчанию: **html5** `<!DOCTYPE html>`. 
 - Кодировка по умолчанию: **UTF-8** `<meta charset="UTF-8">`.
 - Не забываем про метатег для IE `<meta http-equiv="X-UA-Compatible" content="IE=Edge">`.
 - Если сайт адаптивный — не забываем про метатег `<meta name="viewport" content="width=device-width, initial-scale=1.0">`.
@@ -87,6 +87,7 @@ Template: index
 	```
 - Вёрстка должна полностью проходить [валидацию](http://validator.w3.org/).
 - **Запрещено использование таблиц для нетабличных данных!**
+- **Запрещено вкладывать блочные элементы внутрь строчных!**
 - При разметке страниц так же можно делать микроразметку. 
 	+ Ссылки на стандарт: [schema.org](http://schema.org/), [ruschema.org](http://ruschema.org/). 
 	+ Инструменты проверки: [от google](http://www.google.ru/webmasters/tools/richsnippets?hl=ru), [от яндекса](http://webmaster.yandex.ru/microtest.xml).
