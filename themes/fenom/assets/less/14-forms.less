@@ -1,0 +1,274 @@
+/* ==========================================================================
+   FORMS */
+/* ========================================================================== */
+
+	.input {
+		display: inline-block;
+		height: @inputHeight;
+		padding: 0 20px;
+		position: relative;
+		margin-bottom: @baseLineHeight / 2;
+		color: @textDark;
+		vertical-align: middle;
+		border: solid 1px @secondary;
+		outline: none;
+		background-color: @white;
+		-webkit-appearance: none;
+		border-radius: 2px;
+		.box-sizing;
+		.transition;
+
+		&:focus {
+			outline: none;
+			border-color: @primary;
+			background-color: transparent;
+			color: @primary;
+		} // .input:focus
+
+		textarea& {
+			padding: 20px;
+			height: auto;
+		} // textarea.input
+
+		select& {
+			padding: 0;
+			cursor: pointer;
+			-webkit-appearance: menulist;
+
+			&[multiple],
+			&.multiple {
+				-webkit-appearance: none;
+				height: auto;
+			} // select.input[multiple], select.input.multiple
+
+		} // select.input
+
+		&[type="file"] {
+			padding: 7px 10px;
+		} //.input[type="file"]
+
+		&[type="number"],
+		&[type="date"],
+		&[type="time"] {
+			padding: 0 0 0 20px; // убираем отступы у этих типов полей иначе будет некрасиво.
+		} //.input[type="number"], .input[type="date"], .input[type="time"]
+
+		&[type="color"] {
+			padding: 0;
+		} //.input[type="color"]
+
+		&-required,
+		&[required] {
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAI5JREFUeNpi/P//PwM1ARMDlcGogaMGkgEYdysrEK3Y5c59klzoC8T7gPgzFIPYPuR6uQWINwGxIxDzQDGIvRkqR5KBIFdU41FTDXU90QYWEaGukBQDTYhQZ0LtZMNIioFniFB3mhQD+4lQ10+KgaCk0YpHTStUDUlhWAPE/kC8H4i/QjGI7QeVIxoABBgA0UkaIFtFpqkAAAAASUVORK5CYII=');
+			background-size: 10px 10px;
+			background-repeat: no-repeat;
+			background-position: 100% 0;
+		} //.input-required
+		
+		&.disabled,
+		&-disabled,
+		&:disabled {
+			opacity: .5;
+			&:hover {
+				background-color: @white;
+				color: @textDark;
+			}
+		} // .disabled, .input-disabled, [disabled]
+
+
+		&-editor {
+			min-height: 150px;
+		} //.input-editor
+
+		&-block {
+			width: 100%;
+		} //.input-block
+
+	} //.input
+	
+
+
+	.checkbox {
+		position: absolute;
+		left: -9999px;
+
+		+ label {
+			cursor: pointer;
+			margin-top: 4px;
+			display: inline-block;
+			.user-select;
+
+			> span {
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				margin: -2px 4px 0 0;
+				vertical-align: middle;
+				background:  @white;
+				cursor: pointer;
+				border: solid 1px @secondary;
+				border-radius: 3px;
+				position: relative;
+			}
+			&:hover {
+				color: @primary;
+				> span {
+					border-color: @primary;
+				}
+			}
+		}
+
+		&:checked + label > span {
+			border-color: @primary;
+
+			&:before {
+				content: ' ';
+				position: absolute;
+				border: solid @primary;
+				border-width: 0 0 2px 2px;
+				height: 5px;
+				width: 8px;
+				left: 4px;
+				top: 4px;
+				border-radius: 0 0 0 3px;
+				.rotate;
+			}
+		}
+		&:focus + label > span {
+			border-color: @primary;
+		}
+		&:focus + label {
+			color: @primary;
+		}
+		&:checked:disabled + label > span,
+		&:checked:disabled + label:hover > span {
+			border-color: @textDark;
+			background-color: lighten(@textDark, 20%);
+			cursor: default;
+			&:before {
+				border-color: @textDark;
+			}
+		}
+
+		&:disabled + label > span,
+		&:disabled + label > span:hover,
+		&:disabled + label:hover > span {
+			border-color: @textDark;
+			background-color: lighten(@textDark, 10%);
+			cursor: default;
+			&:before {
+				border-color: @textDark;
+			}
+		}
+
+		&:disabled + label,
+		&:disabled + label:hover {
+			color: @textDark;
+			cursor: default;
+		}
+
+	}
+
+	.radio {
+		position: absolute;
+		left: -9999px;
+
+		+ label {
+			cursor: pointer;
+			margin-top: 4px;
+			display: inline-block;
+
+			> span {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				margin: -2px 4px 0 0;
+				vertical-align: middle;
+				background:  @white;
+				cursor: pointer;
+				border: solid 1px @secondary;
+				position: relative;
+				.border-radius(10px);
+			}
+			&:hover,
+			&:focus {
+				> span {
+					border-color: @secondary;
+				}
+			}
+		}
+
+		&:checked + label > span {
+			border-color: @primary;
+
+			&:before {
+				content: ' ';
+				position: absolute;
+				height: 10px;
+				width: 10px;
+				background: @primary;
+				left: 3px;
+				top: 3px;
+				.border-radius(5px);
+			}
+		}
+		&:focus + label > span {
+			border-color: @primary;
+		}
+		&:focus + label {
+			color: @primary;
+		}
+		&:checked:disabled + label > span,
+		&:checked:disabled + label:hover > span {
+			border-color: @textDark;
+			background-color: lighten(@textDark, 20%);
+			cursor: default;
+			&:before {
+				background: @textDark;
+			}
+		}
+
+		&:disabled + label > span,
+		&:disabled + label > span:hover,
+		&:disabled + label:hover > span {
+			border-color: @textDark;
+			background-color: lighten(@textDark, 10%);
+			cursor: default;
+			&:before {
+				background: @textDark;
+			}
+		}
+
+		&:disabled + label,
+		&:disabled + label:hover {
+			color: @textDark;
+			cursor: default;
+		}
+	}
+
+
+.bx-auth-reg {
+	.alert {
+		p {
+			margin: 0 !important;
+		}
+	}
+}
+
+.form-control {
+	margin: 1em 0;
+	.input {
+		margin: 0;
+	}
+}
+.form-label {
+	@media (min-width: @screenTablet) {
+		text-align: right;
+	}
+	display: inline-block;
+	vertical-align: middle;
+	.box-sizing;
+}
+
+
+
