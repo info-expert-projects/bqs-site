@@ -1,0 +1,55 @@
+/* ==========================================================================
+   LEFT-NAV */
+/* ========================================================================== */
+
+	.left-nav-block {
+		margin: 0;
+		padding: 20px 0;
+	}
+	.left-nav {
+		&,
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			font-size: 18px;
+			border-top: solid 1px lighten(@textLight, 10%);
+			
+			&:first-child {
+				border-top: 0;
+			}
+			li {
+				font-size: 16px;
+				&,
+				&:first-child {
+					border-top: solid 1px lighten(@textLight, 5%);
+				}
+				a {
+					padding-left: 20px;
+				}
+
+			}
+
+			a {
+				display: block;
+				padding: 5px 0;
+				.transition;
+				
+				&:hover {
+					text-decoration: none;
+				}
+
+			}
+			&.active {
+				// background: darken(@textLight, 10%);
+
+				> a {
+					color: @additional;
+				}
+			}
+		}
+	}
+

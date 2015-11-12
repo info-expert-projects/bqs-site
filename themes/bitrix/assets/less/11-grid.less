@@ -1,0 +1,481 @@
+// Конфиг
+
+// .content  - обёртка для колонок
+// .col      - общий класс для всех колонок
+// 
+// X - число от 1 до значения, заданного в @columns
+// .col-mb-X - мобильники и выше
+// .col-X    - планшеты и выше
+// .col-dt-X - десктопы
+// .col-ld-X - большие десктопы
+
+@columns:                 12;   // Количество колонок
+
+// Рсстояние между колонок лучше указывать кратное двум
+@gutterWidthMobile:       16px; // Мобильники и выше
+@gutterWidth:             20px; // Планшеты и выше
+@gutterWidthDesktop:      24px; // Десктоп и выше
+@gutterWidthLargeDesktop: 30px; // Большой десткоп
+
+// Уменьшаем количество css кода, если не нужен расширенный функционал (0 — откл. 1 — вкл.)
+@enablePushPull:          1;    // Разрешить классы перемещения (для порядка следования блоков)
+@enableOffset:            1;    // Разрешить классы смещения (для изменеия визуальной позиции блоков — смещение вправо)
+
+
+// Ширина колонки
+
+@columnWidth: 	100%/@columns;
+
+// Break-points
+
+@screenPhone: 	480px;                  // screenPhone
+@screenTablet: 	768px;                  // screenTablet
+@screenDesktop: 992px;                  // screenDesktop
+@screenLarge:   1280px;                 // screenLarge
+
+@screenPhoneMax: (@screenTablet - 1);   // screenPhoneMax
+@screenTabletMax: (@screenDesktop - 1); // screenTabletMax
+@screenDesktopMax: (@screenLarge - 1);  // screenDesktopMax
+
+//
+.contentGutter(@gutter) {
+	margin-left: -@gutter / 2;
+	margin-right: -@gutter / 2;
+}
+.colGutter(@gutter) {
+	padding-left: @gutter / 2;
+	padding-right: @gutter / 2;
+}
+
+
+
+// Общие стили для всех колонок
+/* ==========================================================================
+   GRID */
+/* ========================================================================== */
+	
+
+.content {
+	position: relative;
+	.center-block();
+	.clearfix();
+
+	.content {
+		@media (max-width: @screenTablet) {
+			.contentGutter(@gutterWidthMobile);
+		}
+		@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+			.contentGutter(@gutterWidth);
+		}
+		@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+			.contentGutter(@gutterWidthDesktop);
+		}
+		@media (min-width: @screenLarge) {
+			.contentGutter(@gutterWidthLargeDesktop);
+		}
+	}
+}
+
+.col {
+	@media (max-width: @screenTablet) {
+		.colGutter(@gutterWidthMobile);
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		.colGutter(@gutterWidth);
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		.colGutter(@gutterWidthDesktop);
+	}
+	@media (min-width: @screenLarge) {
+		.colGutter(@gutterWidthLargeDesktop);
+	}
+	position: relative;
+	min-height: 1px;
+	float: left;
+	.box-sizing();
+}
+
+// Мобильники и выше
+
+	.columns (@index) when (@index > 0) {
+		.col-mb-@{index} {
+			width: @columnWidth * @index;
+		}
+		.columns(@index - 1);
+	}
+	.columns (0) {}
+	.columns (@columns);
+
+	// Смещение
+	.offset(@index) {};
+	.offset(@index) {};
+	.offset (@index) when (@index >= 0) and (@enableOffset = 1) {
+		.col-mb-offset-@{index} {
+			margin-left: @columnWidth * @index;
+		}
+		.offset(@index - 1);
+	}
+	.offset (0) {}
+	.offset (@columns);
+
+
+	// Перемещение вправо
+
+	.pull(@index){};
+	.pull (@index) when (@index > 0) and (@enablePushPull = 1) {
+		.col-mb-right-@{index} {
+			right: @columnWidth * @index;
+		}
+		.pull(@index - 1);
+	}
+	.pull (0) {}
+	.pull (@columns);
+
+
+	// Перемещение влево
+
+	.push(@index){};
+	.push (@index) when (@index >= 0) and (@enablePushPull = 1) {
+		.col-mb-left-@{index} {
+			left: @columnWidth * @index;
+		}
+		.push(@index - 1);
+	}
+	.push (0) {}
+	.push (@columns);
+
+
+// Планшеты и выше
+
+@media (min-width: @screenTablet) {
+
+	.content {
+		max-width: @screenTablet - (@gutterWidth * 2);
+	}
+
+	// Колонки
+	.col {
+		float: left;
+	}
+	.columns (@index) when (@index > 0) {
+		.col-@{index} {
+			width: @columnWidth * @index;
+		}
+		.columns(@index - 1);
+	}
+	.columns (0) {}
+	.columns (@columns);
+
+
+	// Смещение
+
+	.offset(@index) {};
+	.offset (@index) when (@index >= 0) and (@enableOffset = 1) {
+		.col-offset-@{index} {
+			margin-left: @columnWidth * @index;
+		}
+		.offset(@index - 1);
+	}
+	.offset (0) {}
+	.offset (@columns);
+
+
+	// Перемещение вправо
+
+	.pull(@index){};
+	.pull (@index) when (@index > 0) and (@enablePushPull = 1) {
+		.col-right-@{index} {
+			right: @columnWidth * @index;
+		}
+		.pull(@index - 1);
+	}
+	.pull (0) {}
+	.pull (@columns);
+
+
+	// Перемещение влево
+
+	.push(@index){};
+	.push (@index) when (@index >= 0) and (@enablePushPull = 1) {
+		.col-left-@{index} {
+			left: @columnWidth * @index;
+		}
+		.push(@index - 1);
+	}
+	.push (0) {}
+	.push (@columns);
+
+}
+
+// Маленькие десктопы и выше
+
+
+@media (min-width: @screenDesktop) {
+
+	.content {
+		max-width: @screenDesktop  - (@gutterWidth * 2);
+	}
+
+	// Колонки
+	.col {
+		float: left;
+	}
+	.columns (@index) when (@index > 0) {
+		.col-dt-@{index} {
+			width: @columnWidth * @index;
+		}
+		.columns(@index - 1);
+	}
+	.columns (0) {}
+	.columns (@columns);
+
+
+	// Смещение
+
+	.offset (@index) when (@index >= 0)  and (@enableOffset = 1) {
+		.col-dt-offset-@{index} {
+			margin-left: @columnWidth * @index;
+		}
+		.offset(@index - 1);
+	}
+	.offset (0) {}
+	.offset (@columns);
+
+
+	// Перемещение вправо
+
+	.pull(@index){};
+	.pull (@index) when (@index > 0) and (@enablePushPull = 1) {
+		.col-dt-right-@{index} {
+			right: @columnWidth * @index;
+		}
+		.pull(@index - 1);
+	}
+	.pull (0) {}
+	.pull (@columns);
+
+
+	// Перемещение влево
+
+	.push(@index){};
+	.push (@index) when (@index >= 0) and (@enablePushPull = 1) {
+		.col-dt-left-@{index} {
+			left: @columnWidth * @index;
+		}
+		.push(@index - 1);
+	}
+	.push (0) {}
+	.push (@columns);
+
+}
+
+
+// Большие десктопы и дальше (до бесконечности...)
+
+
+@media (min-width: @screenLarge) {
+
+	.content {
+		max-width: @screenLarge  - (@gutterWidth * 2);
+	}
+
+	// Колонки
+	.col {
+		float: left;
+	}
+	.columns (@index) when (@index > 0) {
+		.col-ld-@{index} {
+			width: @columnWidth * @index;
+		}
+		.columns(@index - 1);
+	}
+	.columns (0) {}
+	.columns (@columns);
+
+
+	// Смещение
+
+	.offset(@index) {};
+	.offset (@index) when (@index >= 0) and (@enableOffset = 1) {
+		.col-ld-offset-@{index} {
+			margin-left: @columnWidth * @index;
+		}
+		.offset(@index - 1);
+	}
+	.offset (0) {}
+	.offset (@columns);
+
+
+	// Перемещение вправо
+
+	.pull(@index){};
+	.pull (@index) when (@index > 0) and (@enablePushPull = 1) {
+		.col-ld-right-@{index} {
+			right: @columnWidth * @index;
+		}
+		.pull(@index - 1);
+	}
+	.pull (0) {}
+	.pull (@columns);
+
+
+	// Перемещение влево
+
+	.push(@index){};
+	.push (@index) when (@index >= 0) and (@enablePushPull = 1) {
+		.col-ld-left-@{index} {
+			left: @columnWidth * @index;
+		}
+		.push(@index - 1);
+	}
+	.push (0) {}
+	.push (@columns);
+
+}
+
+
+// Other
+
+
+// Positioning
+
+.center-block {
+	margin: 0 auto;
+}
+
+
+// Вспомогательные классы для показа/скрытия элементов на определённых экранах
+@media (max-width: @screenPhoneMax) {
+	.col-mb-hide,
+	.mb-hide,
+	.tablet-block,
+	.dt-block,
+	.ld-block {display: none;}
+	.mb-block {display: block;}
+}
+
+@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+	.col-hide,
+	.tablet-hide,
+	.mb-block,
+	.dt-block,
+	.ld-block {display: none;} 
+	.tablet-block {display: block;}
+}
+
+@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+	.col-dt-hide, 
+	.dt-hide, 
+	.mb-block, 
+	.tablet-block, 
+	.ld-block {display: none;}
+	.dt-block {display: block;}
+}
+
+@media (min-width: @screenLarge) {
+	.col-ld-hide, 
+	.ld-hide, 
+	.mb-block,
+	.tablet-block,
+	.dt-block {display: none;}
+	.ld-block {display: block;}
+}
+
+// Вспомогательные классы для добавления отступов снизу и сверху к колонкам в соответсвии с настройками отступов между колонками
+// Полезно, когда требуется ровный "зазор" между блоками со всех сторон и на всех устройствах.
+
+.col-padding {
+	@media (max-width: @screenTablet) {
+		padding-top: @gutterWidthMobile;
+		padding-bottom: @gutterWidthMobile;
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		padding-top: @gutterWidth;
+		padding-bottom: @gutterWidth;
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		padding-top: @gutterWidthDesktop;
+		padding-bottom: @gutterWidthDesktop;
+	}
+	@media (min-width: @screenLarge) {
+		padding-top: @gutterWidthLargeDesktop;
+		padding-bottom: @gutterWidthLargeDesktop;
+	}
+}
+
+.col-padding-top {
+	@media (max-width: @screenTablet) {
+		padding-top: @gutterWidthMobile;
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		padding-top: @gutterWidth;
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		padding-top: @gutterWidthDesktop;
+	}
+	@media (min-width: @screenLarge) {
+		padding-top: @gutterWidthLargeDesktop;
+	}
+}
+
+.col-padding-bottom {
+	@media (max-width: @screenTablet) {
+		padding-bottom: @gutterWidthMobile;
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		padding-bottom: @gutterWidth;
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		padding-bottom: @gutterWidthDesktop;
+	}
+	@media (min-width: @screenLarge) {
+		padding-bottom: @gutterWidthLargeDesktop;
+	}
+}
+
+.col-margin {
+	@media (max-width: @screenTablet) {
+		margin-top: @gutterWidthMobile;
+		margin-bottom: @gutterWidthMobile;
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		margin-top: @gutterWidth;
+		margin-bottom: @gutterWidth;
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		margin-top: @gutterWidthDesktop;
+		margin-bottom: @gutterWidthDesktop;
+	}
+	@media (min-width: @screenLarge) {
+		margin-top: @gutterWidthLargeDesktop;
+		margin-bottom: @gutterWidthLargeDesktop;
+	}
+}
+.col-margin-bottom {
+	@media (max-width: @screenTablet) {
+		margin-bottom: @gutterWidthMobile;
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		margin-bottom: @gutterWidth;
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		margin-bottom: @gutterWidthDesktop;
+	}
+	@media (min-width: @screenLarge) {
+		margin-bottom: @gutterWidthLargeDesktop;
+	}
+}
+.col-margin-top {
+	@media (max-width: @screenTablet) {
+		margin-top: @gutterWidthMobile;
+	}
+	@media (min-width: @screenTablet) and (max-width: @screenTabletMax) {
+		margin-top: @gutterWidth;
+	}
+	@media (min-width: @screenDesktop) and (max-width: @screenDesktopMax) {
+		margin-top: @gutterWidthDesktop;
+	}
+	@media (min-width: @screenLarge) {
+		margin-top: @gutterWidthLargeDesktop;
+	}
+}
