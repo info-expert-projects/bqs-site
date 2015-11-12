@@ -1,0 +1,202 @@
+/* ==========================================================================
+   BUTTONS */
+/* ========================================================================== */
+	
+
+.btn {
+	display: inline-block;
+	color: @btnColor;
+	margin-bottom: 0; // For input.btn
+	font: normal 16px/@inputHeight @sans;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	background: @btnBackground;
+	border: 0;
+	text-decoration: none;
+	white-space: nowrap;
+	height: @inputHeight;
+	padding: 0 20px;
+	border-radius: 3px;
+	.user-select();
+	.transition;
+	.box-sizing;
+
+	&:focus {
+		.tab-focus();
+	}
+
+	&:hover,
+	&:focus {
+		color: @btnHoverColor;
+		background: @btnHoverBackground;
+		text-decoration: none;
+	}
+
+	&:active,
+	&.active {
+		outline: 0;
+		background: darken(@btnHoverBackground, 10%);
+	}
+
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+		pointer-events: none; // Future-proof disabling of clicks
+		opacity: .65;
+	}
+
+	// Пример кастомизации кнопки
+	&-primary {
+		background: @primary;
+		color: @white;
+
+		&:hover,
+		&:focus {
+			color: @white;
+			background: darken(@primary, 10%);
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			color: @white;
+			background: darken(@primary, 20%);
+		}
+	} //.btn-primary
+
+	&-secondary {
+		background: @secondary;
+		color: @white;
+
+		&:hover,
+		&:focus {
+			color: @white;
+			background: darken(@secondary, 10%);
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			color: @white;
+			background: darken(@secondary, 20%);
+		}
+	} //.btn-secondary
+
+	&-additional {
+		background: @additional;
+		color: @textDark;
+
+		&:hover,
+		&:focus {
+			color: @textDark;
+			background: darken(@additional, 10%);
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			color: @textDark;
+			background: darken(@additional, 20%);
+		}
+	} //.btn-additional
+
+
+
+	// Блочные кнопки
+	&-block {
+		display: block;
+		width: 100%;
+		.box-sizing();
+
+		+ .btn-block {
+			margin-top: 5px;
+		}
+
+		input[type="submit"]&,
+		input[type="reset"]&,
+		input[type="button"]& {
+			width: 100%;
+		}
+	} // .btn-block
+
+
+	// Пример квадратной кнопки
+	&-square {
+		border-radius: 0;
+	} //.btn-square
+
+	// Кнопки-ссылки
+	&-link {
+		color: @linkColor;
+		cursor: pointer;
+		border-radius: 0;
+		background-color: transparent;
+		padding-left: 0;
+		padding-right: 0;
+
+		&,
+		&:active,
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: transparent;
+			.box-shadow(none);
+		}
+
+		&:hover,
+		&:focus {
+			color: @linkHoverColor;
+			text-decoration: underline;
+			background-color: transparent;
+		}
+		&[disabled],
+		fieldset[disabled] & {
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				color: @linkHoverColor;
+				text-decoration: none;
+			}
+		}
+	} //.btn-link
+	
+	// Размеры кнопок
+	&-small {
+		height: @inputHeight - 4;
+		font: normal 14px @sans;
+		line-height: @inputHeight - 4;
+		padding: 0 10px;
+		min-width: 15px;
+	} //.btn-small
+
+	&-mini {
+		height: @inputHeight - 12;
+		font: normal 13px @sans;
+		line-height: @inputHeight - 12;
+		padding: 0 10px;
+	} //.btn-mini
+
+	&-outline {
+		background-color: transparent;
+		color: @btnBackground;
+		border: solid 1px @btnBackground;
+
+		&:hover,
+		&:focus {
+			color: @white;
+			background: @btnBackground;
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			color: @white;
+			background: @btnHoverBackground;
+			border-color: @btnHoverBackground;
+		}
+	} //.btn-outline
+	
+
+} //.btn

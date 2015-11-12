@@ -1,0 +1,218 @@
+ul.resp-tabs-list {
+	margin: 0px;
+	padding: 0px;
+}
+
+.resp-tabs-list li {
+	font-size: 13px;
+	line-height: 40px;
+	font-weight: bold;
+	display: block;
+	padding: 10px 15px 9px;
+	margin: 0;
+	list-style: none;
+	cursor: pointer;
+	float: left;
+	width: 180px;
+	// border-left: solid 2px transparent;
+	background: @gray1;
+	font-family: @PTSans;
+	color: @white;
+	position: relative;
+	.box-sizing;
+	&:after {
+		.after;
+		top: 8px;
+		left: 0;
+		bottom: 8px;
+		width: 1px;
+		background: fadeout(@white, 70%);
+	}
+
+	.icon {
+		vertical-align: middle;
+	}
+
+	&:first-child {
+		// border-left: 0;
+		width: 220px;
+		&:after {
+			content: none;
+		}
+	}
+
+	&:hover {
+		background: transparent;
+		color: @textColor;
+	}
+	&.resp-tab-active {
+		color: @textColor;
+		background: transparent;
+	}
+}
+
+.resp-tabs-container {
+	padding: 0;
+	clear: left;
+	.h2,
+	h2 {
+		margin-top: 14px;
+		margin-bottom: 14px;
+	}
+	.col-8 {
+		margin-bottom: 20px;
+	}
+}
+
+h2.resp-accordion {
+	cursor: pointer;
+	padding: 5px;
+	display: none;
+}
+
+.resp-tab-content {
+	display: none;
+	padding: 0;
+}
+
+
+
+.resp-content-active, .resp-accordion-active {
+	display: block;
+}
+
+.resp-tab-content {
+	// border: 1px solid @grayDark;
+}
+
+h2.resp-accordion {
+	font-size: 13px;
+	// border: 1px solid @grayDark;
+	// border-top: 0px solid @grayDark;
+	margin: 0px;
+	padding: 10px 15px;
+}
+
+h2.resp-tab-active {
+	// border-bottom: 0px solid @grayDark !important;
+	margin-bottom: 0px !important;
+	padding: 10px 15px !important;
+}
+
+h2.resp-tab-title:last-child {
+	border-bottom: 12px solid @grayDark !important;
+	background: blue;
+}
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+	float: left;
+	width: 30%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+	display: block;
+	padding: 15px 15px !important;
+	margin: 0;
+	cursor: pointer;
+	float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+	padding: 0px;
+	background-color: #fff;
+	border: 1px solid @grayDark;
+	float: left;
+	width: 68%;
+	min-height: 250px;
+	border-radius: 4px;
+	clear: none;
+}
+
+.resp-vtabs .resp-tab-content {
+	border: none;
+}
+
+.resp-vtabs li.resp-tab-active {
+	border: 1px solid @grayDark;
+	border-right: none;
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+	margin-right: -1px !important;
+	padding: 14px 15px 15px 14px !important;
+}
+
+.resp-arrow {
+	width: 0;
+	height: 0;
+	float: right;
+	margin-top: 3px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 12px solid @grayDark;
+}
+
+h2.resp-tab-active span.resp-arrow {
+	border: none;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 12px solid @white;
+}
+
+/*-----------Accordion styles-----------*/
+h2.resp-tab-active {
+	color: @white;
+	background: @blue !important;
+}
+.resp-easy-accordion  h2.resp-accordion {
+	display: block;
+}
+.resp-easy-accordion .resp-tab-content {
+	border: 1px solid @grayDark;
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+	border-bottom: 1px solid @grayDark !important;
+}
+
+.resp-jfit {
+	width: 100%;
+	margin: 0px;
+}
+
+.resp-tab-content-active {
+	display: block;
+}
+
+h2.resp-accordion:first-child {
+	border-top: 1px solid @grayDark !important;
+}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 768px) {
+	ul.resp-tabs-list {
+		display: none;
+	}
+
+	h2.resp-accordion {
+		display: block;
+	}
+
+	.resp-vtabs .resp-tab-content {
+		border: 1px solid @grayDark;
+	}
+
+	.resp-vtabs .resp-tabs-container {
+		border: none;
+		float: none;
+		width: 100%;
+		min-height: initial;
+		clear: none;
+	}
+	.resp-accordion-closed {
+		display:none !important;
+	}
+	.resp-vtabs .resp-tab-content:last-child {
+		border-bottom: 1px solid @grayDark !important;
+	}
+}

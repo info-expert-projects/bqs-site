@@ -1,0 +1,20 @@
+name: Less Compiler
+version: 2.1.0-dev
+description: "Less Compiler Plugin for Morfy CMS"
+author:
+  name: Pavel Belousov
+  email: pafnuty10@gmail.com
+  url: http://pafnuty.name
+homepage: https://github.com/pafnuty/morfy-less
+bugs: https://github.com/pafnuty/morfy-less/issues
+license: MIT
+
+# Plugin settings
+enabled: true
+config: 
+  # assetsFolder: '/styles'
+  fileNames: 
+    - 'main'
+  # outputPath: '/styles'
+  # compress: false
+  # sourceMap: true

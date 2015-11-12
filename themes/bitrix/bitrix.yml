@@ -1,0 +1,12 @@
+name: Bitrix
+version: 1.0.0
+description: Bitrix QS Docks Theme
+author:
+  name: Pavel Belousov
+  email: pafnuty10@gmail.com
+  url: https://github.com/pafnuty
+homepage: https://github.com/pafnuty/bqs-site
+bugs: https://github.com/pafnuty/bqs-site/issues
+
+# Theme settings
+enabled: true
