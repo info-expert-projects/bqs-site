@@ -9,7 +9,7 @@ template: index
 # Правила оформления PHP-кода
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/php.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/php.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 ### Соблюдение стандартов PSR

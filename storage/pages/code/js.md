@@ -9,7 +9,7 @@ template: index
 # Правила оформления js-кода
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/js.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/js.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 ## Комментирование кода

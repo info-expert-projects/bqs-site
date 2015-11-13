@@ -8,7 +8,7 @@ template: index
 # Документация
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/index.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 - **Быстрый старт** — Набор файлов, подготовленный для удобства и значительного ускорения начала разработки нового сайта на [CMS Bitrix](http://www.1c-bitrix.ru/). 

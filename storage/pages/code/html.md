@@ -8,7 +8,7 @@ template: index
 # Правила оформления HTML-кода
 
 <div class="tip">
-	:construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/html.md" class="btn btn-small" target="_blank">Редактировать</a>
+	:construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/html.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 На этапе вёрстки собственных проектов необходимо на основе графического макета произвести html-вёрстку сайта, которая будет передана на следующий этап разработки.

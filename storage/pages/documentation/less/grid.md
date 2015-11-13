@@ -7,7 +7,7 @@ template: grid
 
 # Сетка Быстрого старта
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/grid.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/grid.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
 
 
 

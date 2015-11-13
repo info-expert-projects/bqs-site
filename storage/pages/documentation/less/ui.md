@@ -6,7 +6,7 @@ template: index
 ---
 
 # UI
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/ui.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/ui.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
 
 
 На этой странице даны примеры UI-элементов, уже готовых для использования.

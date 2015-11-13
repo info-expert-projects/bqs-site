@@ -8,5 +8,5 @@ template: index
 # Bitrix Quick Start
 
 <div class="tip">
-   Сайт находится в стадии наполнения <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/index.md" class="btn btn-small" target="_blank">Редактировать</a>
+   Сайт находится в стадии наполнения <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>

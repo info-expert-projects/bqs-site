@@ -7,7 +7,7 @@ template: index
 
 
 # Правила оформления LESS и CSS кода 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/css.md" class="btn btn-mini" target="_blank">Редактировать эту страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/css.md" class="btn btn-mini" target="_blank">Редактировать эту страницу</a>
 
 Данный раздел описывает правила написания LESS и CSS кода, принятые в Инфо-Эксперт. 
 
@@ -501,7 +501,7 @@ ${5:@media (min-width: @screenLarge) {
 
 ---
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/css.md" class="btn btn-small" target="_blank">Редактировать эту страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/css.md" class="btn btn-small" target="_blank">Редактировать эту страницу</a>
 
 
 

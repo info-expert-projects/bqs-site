@@ -7,7 +7,7 @@ template: index
 
 # Организация LESS-кода
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/index.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/index.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
 </div>
 
 ### Навигация по компонентам

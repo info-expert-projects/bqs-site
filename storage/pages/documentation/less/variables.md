@@ -6,7 +6,7 @@ template: index
 ---
 
 # Переменные
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/variables.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/variables.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
 
 <div class="alert alert-error mt20">
 	<p>Прежде всего необходимо отметить тот факт, что QuickStart это набор заготовок под старт проекта с нуля.</p>

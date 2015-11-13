@@ -7,7 +7,7 @@ template: index
 
 # Таблицы
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/tables.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/tables.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
 
 Для таблиц предусмотрено несколько классов, позволяющих задать базовое оформление таблиц.
 
