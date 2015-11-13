@@ -11,22 +11,16 @@
 /* ========================================================================== */
 	
 
-html {height: 100%;}
-* html body {height: 100%;}
+html, body {height: 100%;}
 body {
-	height: auto !important;
-	height: 100%;
+	height: auto;
 	min-height: 100%;
 	position: relative;
-
 }
 @footerHeight: 50px; // footerHeight
 
 .body-wrapper {
-	padding-bottom: @footerHeight; // Отступ снизу = высота футера + 20px
-	@media (max-width: @screenTablet) {
-		padding-bottom: 160px;
-	}
+	padding-bottom: @footerHeight + 30; // Отступ снизу = высота футера + 30px
 }
 .footer-wrapper {
 	position: absolute;
@@ -34,10 +28,6 @@ body {
 	left: 0;
 	right: 0;
 	height: @footerHeight; // высота футера
-
-	@media (max-width: @screenTablet) {
-		height: 150px;
-	}
 }
 // Прижимем footer к низу окна браузера
 
