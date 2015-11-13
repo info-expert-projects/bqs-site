@@ -8,7 +8,7 @@ template: index
 # Организация кода
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/index.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 <div class="alert fz18 mt20">

@@ -7,7 +7,7 @@ template: index
 
 # Миксины
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/mixins.md" class="btn btn-mini mb20" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/mixins.md" class="btn btn-mini mb20" target="_blank">Редактировать страницу</a>
 
 <div class="alert alert-info">
     В силу технических особенностей компиляции LESS на серверной строне (на PHP) для LESS-кода необходимо указывать браузерные префиксы.

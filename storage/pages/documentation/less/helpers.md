@@ -7,7 +7,7 @@ template: index
 
 # Помощники (helpers)
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/helpers.md" class="btn btn-mini mb20" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/helpers.md" class="btn btn-mini mb20" target="_blank">Редактировать страницу</a>
 
 Классы-помощники предназначены для уменьшения количества css кода.
 

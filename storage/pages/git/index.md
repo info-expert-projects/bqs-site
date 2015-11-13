@@ -9,7 +9,7 @@ template: index
 # Правила работы с Git
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/git/index.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/git/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 ## BitBucket

@@ -8,7 +8,7 @@ template: index
 # Структура расположения папок и файлов в проекте
 
 <div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/code/folders.md" class="btn btn-small" target="_blank">Редактировать</a>
+    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/folders.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 ## [Папка local](#local){#local}

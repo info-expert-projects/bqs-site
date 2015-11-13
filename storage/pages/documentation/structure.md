@@ -8,7 +8,7 @@ template: index
 
 # Структура и назначение файлов Bitrix Quick Start
 
-<a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/structure.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/structure.md" class="btn btn-mini" target="_blank">Редактировать страницу</a>
 
 
 Разработку сайта на Bitrix, актуальной версии следует производить в папке local. 

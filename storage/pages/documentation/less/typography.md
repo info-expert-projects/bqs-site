@@ -8,7 +8,7 @@ template: index
 # Типографика
 
 <div class="tip">
-	:construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/content/documentation/less/typography.md" class="btn btn-small" target="_blank">Редактировать</a>
+	:construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/documentation/less/typography.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
 ---
