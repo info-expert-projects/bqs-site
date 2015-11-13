@@ -11,9 +11,7 @@
 
 		<link rel="shortcut icon" href="/favicon.ico?v=1">
 
-		<title>{$title}{if Url::getUriSegment(0) != ''} | {$.config.site_title}{/if}</title>
-
-		{* Bootstrap core CSS *}
+		<title>{$title}{if Url::getUriSegment(0) != ''} | {$.config.site.title}{/if}</title>
 
 		{Action::run('getCss')}
 
