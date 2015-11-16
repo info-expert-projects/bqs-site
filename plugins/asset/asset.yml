@@ -1,0 +1,19 @@
+name: Asset Plugin
+version: 1.0.0
+description: "Asset Plugin for Morfy CMS"
+author:
+  name: Pavel Belousov
+  email: pafnuty10@gmail.com
+  url: http://pafnuty.name
+homepage: https://github.com/pafnuty/morfy-plugin-asset
+bugs: https://github.com/pafnuty/morfy-plugin-asset/issues
+license: MIT
+
+# Plugin settings
+enabled: true
+excludes:
+  - '-'
+  - '_'
+# folders:
+#   - '/assets/css/'
+#   - '/assets/js/'
