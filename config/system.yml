@@ -19,7 +19,7 @@ fenom:
   strip: true
 
 cache:
-  enabled: false
+  enabled: true
   prefix: 'morfy'
   driver: auto
   lifetime: 604800

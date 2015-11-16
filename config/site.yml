@@ -9,4 +9,4 @@ author:
 plugins:
   less
   breadcrumb
-    
+  asset
