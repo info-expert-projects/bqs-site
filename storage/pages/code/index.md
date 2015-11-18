@@ -11,7 +11,7 @@ template: index
     :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/index.md" class="btn btn-small" target="_blank">Редактировать</a>
 </div>
 
-<div class="alert fz18 mt20">
+<div class="alert alert-error fz18 mt20">
     Основной принцип — код должен выглядеть так, как будто его писал один человек, независимо от количества авторов!
 </div>
 
