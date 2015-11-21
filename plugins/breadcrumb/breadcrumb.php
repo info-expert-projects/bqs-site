@@ -15,14 +15,14 @@ Action::add('breadcrumb', function () {
 
     for ($i = 0; $i < $total_paths; $i++) {
         $lift .= '/' . $paths[$i];
-        $page = Pages::getPage(file_exists(PAGES_PATH . '/' . $lift . '/index.md') || file_exists(PAGES_PATH . '/' . $lift . '.md') ? $lift : '404');
+        $page = Pages::getPage(file_exists(STORAGE_PATH . '/pages/' . $lift . '/index.md') || file_exists(STORAGE_PATH . '/pages/' . $lift . '.md') ? $lift : '404');
         $data[Url::getBase() . $lift] = array(
             'title'   => $page['title'],
             'current' => rtrim(Url::getCurrent(), '/') === rtrim(Url::getBase() . $lift, '/'),
         );
     }
-
-    Template::fenom()->display('/plugins/breadcrumb/breadcrumb.tpl', array(
+    $template = Template::factory(THEMES_PATH . '/' . Config::get('system.theme'));
+    $template->display('/plugins/breadcrumb/breadcrumb.tpl', array(
         'home'   => rtrim(Url::getCurrent(), '/') === rtrim(Url::getBase(), '/') ? true : Url::getBase(),
         'config' => $config,
         'branch' => $data,

@@ -11,12 +11,12 @@
 
 		<link rel="shortcut icon" href="/favicon.ico?v=1">
 
-		<title>{$title}{if Url::getUriSegment(0) != ''} | {$.config.site.title}{/if}</title>
+		<title>{$title}{if Url::getUriSegment(0) != ''} | {$config.site.title}{/if}</title>
 
 		{Action::run('getCss')}
 
-		<link href="/themes/{$.config.system.theme}/assets/css/main.css" rel="stylesheet">
-		<link href="/themes/{$.config.system.theme}/assets/css/hljs/zenburn.css" rel="stylesheet">
+		<link href="/themes/{$config.system.theme}/assets/css/main.css" rel="stylesheet">
+		<link href="/themes/{$config.system.theme}/assets/css/hljs/zenburn.css" rel="stylesheet">
 
 		{Action::run('theme_header')}
 
@@ -61,12 +61,12 @@
 
 		{* Placed at the end of the document so the pages load faster *}
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/themes/{$.config.system.theme}/assets/js/jquery.matchHeight-min.js"></script>
-		<script src="/themes/{$.config.system.theme}/assets/js/highlight.pack.js"></script>
-		<script src="/themes/{$.config.system.theme}/assets/js/emojify.min.js"></script>
-		<script src="/themes/{$.config.system.theme}/assets/js/stickykit.min.js"></script>
-		<script src="/themes/{$.config.system.theme}/assets/js/jquery.mobileNav.min.js"></script>
-		<script src="/themes/{$.config.system.theme}/assets/js/main.js"></script>
+		<script src="/themes/{$config.system.theme}/assets/js/jquery.matchHeight-min.js"></script>
+		<script src="/themes/{$config.system.theme}/assets/js/highlight.pack.js"></script>
+		<script src="/themes/{$config.system.theme}/assets/js/emojify.min.js"></script>
+		<script src="/themes/{$config.system.theme}/assets/js/stickykit.min.js"></script>
+		<script src="/themes/{$config.system.theme}/assets/js/jquery.mobileNav.min.js"></script>
+		<script src="/themes/{$config.system.theme}/assets/js/main.js"></script>
 		<script>
 			hljs.initHighlightingOnLoad();
 		</script>
