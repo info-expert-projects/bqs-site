@@ -101,7 +101,7 @@ class SocialMeta {
 							}
 						}
 
-						$imgResized = Url::getBase() . $imageDir . $fileName;
+						$imgResized = Url::getBase() . '/storage' . $imageDir . $fileName;
 
 					} else {
 						// Если параметра imgSize нет - отдаём исходную картинку
