@@ -39,7 +39,7 @@ Action::add('theme_meta', function () {
 	$arFacebook = [
 		'og:type'        => 'website',
 		'og:site_name'   => Config::get('site.title'),
-		'og:url'         => Url::getBase(),
+		'og:url'         => Url::getCurrent(),
 		'og:title'       => $title,
 		'og:description' => $description,
 		'og:image'       => $facebookImage,
