@@ -10,6 +10,7 @@ plugins:
   less
   breadcrumb
   asset
+  socialmeta
 
 fenom:
   disable_methods: false
