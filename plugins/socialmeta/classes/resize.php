@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Resize image class for Social Meta Plugin
+ */
 class resize {
 	// *** Class variables
 	private $image;
@@ -60,6 +63,7 @@ class resize {
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; rv:12.0) Gecko/20120403211507 Firefox/12.0');
 		$contents = curl_exec($ch);
 		curl_close($ch);
+
 		return $contents;
 	}
 
@@ -80,6 +84,7 @@ class resize {
 			imagealphablending($this->imageResized, false);
 			imagesavealpha($this->imageResized, true);
 		}
+		/** @var $image $this */
 		imagecopyresampled($this->imageResized, $this->image, 0, 0, 0, 0, $optimalWidth, $optimalHeight, $this->width, $this->height);
 		// *** if option is 'crop', then crop too
 		if ($option == 'crop') {
@@ -90,7 +95,8 @@ class resize {
 	## --------------------------------------------------------
 
 	private function getDimensions($newWidth, $newHeight, $option) {
-
+		$optimalWidth  = $newWidth;
+		$optimalHeight = $newHeight;
 		switch ($option) {
 			case 'exact':
 				$optimalWidth  = $newWidth;
@@ -115,6 +121,7 @@ class resize {
 				$optimalHeight = $optionArray['optimalHeight'];
 				break;
 		}
+
 		return array('optimalWidth' => $optimalWidth, 'optimalHeight' => $optimalHeight);
 	}
 
@@ -123,39 +130,40 @@ class resize {
 	private function getSizeByFixedHeight($newHeight) {
 		$ratio    = $this->width / $this->height;
 		$newWidth = $newHeight * $ratio;
+
 		return $newWidth;
 	}
 
 	private function getSizeByFixedWidth($newWidth) {
 		$ratio     = $this->height / $this->width;
 		$newHeight = $newWidth * $ratio;
+
 		return $newHeight;
 	}
 
 	private function getSizeByAuto($newWidth, $newHeight) {
-		if ($this->height < $this->width)
-		// *** Image to be resized is wider (landscape)
+		if ($this->height < $this->width) // *** Image to be resized is wider (landscape)
 		{
 			$optimalWidth  = $newWidth;
 			$optimalHeight = $this->getSizeByFixedWidth($newWidth);
-		} elseif ($this->height > $this->width)
-		// *** Image to be resized is taller (portrait)
+		} elseif ($this->height > $this->width) // *** Image to be resized is taller (portrait)
 		{
 			$optimalWidth  = $this->getSizeByFixedHeight($newHeight);
 			$optimalHeight = $newHeight;
-		} else
-		// *** Image to be resizerd is a square
+		} else // *** Image to be resizerd is a square
 		{
 			if ($newHeight < $newWidth) {
 				$optimalWidth  = $newWidth;
 				$optimalHeight = $this->getSizeByFixedWidth($newWidth);
-			} else if ($newHeight > $newWidth) {
-				$optimalWidth  = $this->getSizeByFixedHeight($newHeight);
-				$optimalHeight = $newHeight;
 			} else {
-				// *** Sqaure being resized to a square
-				$optimalWidth  = $newWidth;
-				$optimalHeight = $newHeight;
+				if ($newHeight > $newWidth) {
+					$optimalWidth  = $this->getSizeByFixedHeight($newHeight);
+					$optimalHeight = $newHeight;
+				} else {
+					// *** Sqaure being resized to a square
+					$optimalWidth  = $newWidth;
+					$optimalHeight = $newHeight;
+				}
 			}
 		}
 
@@ -212,14 +220,15 @@ class resize {
 		}
 
 		($this->extension == '.gif')
-		? $save($this->imageResized, $savePath)
-		: $save(
+			? $save($this->imageResized, $savePath)
+			: $save(
 			$this->imageResized,
 			$savePath,
 			($this->extension == '.png' ? (9 - round(($imageQuality / 100) * 9)) : $imageQuality)
-			// die($savePath);
 		);
 		imagedestroy($this->imageResized);
+
+		return true;
 	}
 
 	## --------------------------------------------------------

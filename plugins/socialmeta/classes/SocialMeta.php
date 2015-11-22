@@ -2,24 +2,29 @@
 
 /**
  * SocialMeta Class
+ *
+ * @package    Morfy
+ * @subpackage Plugins
+ * @author     Pavel Belousov / pafnuty
  */
 class SocialMeta {
 	/**
-	 * @param  string  $data
-	 * @param  string  $noimage
-	 * @param  string  $size
-	 * @param  integer  $quality
-	 * @param  string  $number
-	 * @param  string  $resizeType
-	 * @param  boolean $grabRemote
+	 * @param           $data
+	 * @param string    $noimage
+	 * @param           $size
+	 * @param string    $quality
+	 * @param string    $number
+	 * @param string    $resizeType
+	 * @param bool|true $grabRemote
+	 *
+	 * @return array|string
 	 */
 	public function getImage($data, $noimage = '', $size, $quality = '90', $number = '1', $resizeType = 'crop', $grabRemote = true) {
 
 		$resizeType = ($resizeType == '' || !$resizeType) ? 'auto' : $resizeType;
 		$quality    = ($quality == '' || !$quality) ? '100' : $quality;
 		$noimage    = Url::getBase() . $noimage;
-		// Удалим из адреса сайта последний слеш.
-		// Url::getBase() = (substr(Url::getBase(), -1, 1) == '/') ? substr(Url::getBase(), 0, -1) : Url::getBase();
+
 		// Задаём папку  для загрзки картинок по умолчанию.
 		$uploadDir = '/social/';
 
@@ -36,7 +41,7 @@ class SocialMeta {
 				foreach ($m[1] as $key => $url) {
 
 					// Если номер картинки меньше, чем требуется — проходим мимо.
-					if ($number != 'all' && $i < (int) $number) {
+					if ($number != 'all' && $i < (int)$number) {
 						// Не забываем прибавить счётчик.
 						$i++;
 						continue;
@@ -127,18 +132,18 @@ class SocialMeta {
 
 			return $arImages;
 		}
+
 		// По умолчанию возвращаем отдну картинку (понимаю, что метод должен возвращать всегда один тип данных, но это сделано из-за совместимости версий)
 		return $arImages[$number];
 	}
 
 	/**
-	 * @param        $data    - контент
-	 * @param        $limit
-	 * @param string $etc     - Окончание обрезанного текста
-	 * @param bool   $wordcut - жесткое ограничение символов
+	 * @param            $data
+	 * @param            $limit
+	 * @param string     $etc
+	 * @param bool|false $wordcut
 	 *
-	 * @internal param $length - максимальный размер возвращаемого контента
-	 * @return string $data - обрезанный результат
+	 * @return string
 	 */
 	public function textLimit($data, $limit, $etc = '...', $wordcut = false) {
 		$data = strip_tags($data, '<br>');
@@ -150,6 +155,7 @@ class SocialMeta {
 				$data = mb_substr($data, 0, $word_pos) . $etc;
 			}
 		}
+
 		return $data;
 	}
 }

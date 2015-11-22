@@ -1,19 +1,21 @@
 name: Social Meta Plugin
-version: 1.0.0
+version: 1.0.1
 description: "Social MetaTags Generator for Morfy CMS"
 author:
   name: Pavel Belousov
   email: pafnuty10@gmail.com
   url: http://pafnuty.name
-homepage: https://github.com/pafnuty/morfy-plugin-socialmeta
-bugs: https://github.com/pafnuty/morfy-plugin-socialmeta/issues
+homepage: https://github.com/pafnuty-morfy-plugins/morfy-plugin-socialmeta
+bugs: https://github.com/pafnuty-morfy-plugins/morfy-plugin-socialmeta/issues
 license: MIT
 
 # Plugin settings
 enabled: true
 twitter:
-  author: pafnuty
+  # Username in twitter (last word in profile page url: https://twitter.com/pafnuty_name)
+  author: pafnuty_name
+  # Default image for twitter (min 600x330px) see the /storage/images/morfy-twitter.psd
   noimage: /storage/images/morfy-twitter.png
 facebook:
-  # app_id: 302184056577324
+  # Default image for facebook (min 600x315px) see the /storage/images/morfy-fb.psd
   noimage: /storage/images/morfy-fb.png

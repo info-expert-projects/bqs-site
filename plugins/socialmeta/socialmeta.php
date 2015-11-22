@@ -1,14 +1,16 @@
 <?php
 /**
- *  Social Meta Plugin
+ * Social Meta Plugin
  *
- *  @package Morfy
- *  @subpackage Plugins
- *  @author Pavel Belousov / pafnuty
- *  @version 1.0.0
- *  @license https://github.com/pafnuty/morfy-plugin-socialmeta/blob/master/LICENSE MIT
+ * @package    Morfy
+ * @subpackage Plugins
+ * @author     Pavel Belousov / pafnuty
+ * @version    1.0.1
+ * @license    https://github.com/pafnuty-morfy-plugins/morfy-plugin-socialmeta/blob/master/LICENSE MIT
  */
-Action::add('theme_meta', function () {
+
+Action::add(
+	'theme_meta', function () {
 	require_once PLUGINS_PATH . '/socialmeta/classes/resize.php';
 	require_once PLUGINS_PATH . '/socialmeta/classes/SocialMeta.php';
 
@@ -22,9 +24,9 @@ Action::add('theme_meta', function () {
 	$description = ($page['description']) ? $page['description'] : $page['content'];
 	$description = $socialMeta->textLimit($description, 250);
 
-	$twitterImage = $socialMeta->getImage($page['content'], $config['twitter']['noimage'], '600x330', '100');
+	$twitterImage = (isset($page['twitter_image'])) ? Url::getBase() . $page['twitter_image'] : $socialMeta->getImage($page['content'], $config['twitter']['noimage'], '600x330', '100');
 
-	$facebookImage = $socialMeta->getImage($page['content'], $config['facebook']['noimage'], '600x315', '100');
+	$facebookImage = (isset($page['og_image'])) ? Url::getBase() . $page['og_image'] : $socialMeta->getImage($page['content'], $config['facebook']['noimage'], '600x315', '100');
 
 	$arTwitter = [
 		'twitter:card'        => 'summary_large_image',
@@ -39,7 +41,7 @@ Action::add('theme_meta', function () {
 	$arFacebook = [
 		'og:type'        => 'website',
 		'og:site_name'   => Config::get('site.title'),
-		'og:url'         => Url::getCurrent(),
+		'og:url'         => $page['url'],
 		'og:title'       => $title,
 		'og:description' => $description,
 		'og:image'       => $facebookImage,
@@ -52,4 +54,5 @@ Action::add('theme_meta', function () {
 		echo '<meta property="' . $property . '" content="' . $content . '">';
 	}
 
-});
+}
+);
