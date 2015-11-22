@@ -1,17 +1,17 @@
-# Plugin metadata
-# name: Breadcrumb
-# version: 2.0.0
-# description: "Provides breadcrumb navigation for blog."
-# author:
-#   name: Taufik Nurrohman
-#   url: http://latitudu.com
-# homepage: https://github.com/tovic/breadcrumb-plugin-for-morfy-cms
-# bugs: https://github.com/tovic/breadcrumb-plugin-for-morfy-cms/issues
-# license: GPL v3
+name: Breadcrumb Plugin
+version: 1.0.1
+description: "Breadcrumb Plugin for Morfy CMS"
+author:
+  name: Pavel Belousov
+  email: pafnuty10@gmail.com
+  url: http://pafnuty.name
+homepage: https://github.com/pafnuty-morfy-plugins/morfy-plugin-breadcrumb
+bugs: https://github.com/pafnuty-morfy-plugins/morfy-plugin-breadcrumb/issues
+license: MIT
+
+# Plugin settings
+enabled: true
 
 # List of item's readable text or labels
 labels:
   home: Главная
-
-# Plugin settings
-enabled: true

@@ -1,0 +1,13 @@
+name: statistics
+version: 3.0.1
+description: "Statistics Plugin for Morfy CMS"
+author:
+  name: Pavel Belousov
+  email: pafnuty10@gmail.com
+  url: http://pafnuty.name
+homepage: https://github.com/pafnuty-morfy-plugins/morfy-statistics
+bugs: https://github.com/pafnuty-morfy-plugins/morfy-statistics/issues
+license: MIT
+
+# Plugin settings
+enabled: true

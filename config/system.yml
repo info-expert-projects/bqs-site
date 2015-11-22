@@ -1,9 +1,17 @@
 # System Configuration
 
-timezone: 'Europe/Moscow'
-charset: 'UTF-8'
+timezone: Europe/Moscow
+charset: UTF-8
 
-theme: 'bitrix'
+theme: bitrix
+
+# Site Plugins
+plugins:
+  less
+  breadcrumb
+  asset
+  socialmeta
+  statistics
 
 fenom:
   disable_methods: false
@@ -18,11 +26,15 @@ fenom:
   disable_statics: false
   strip: true
 
+pages:
+  flush_cache: false
+
+errors:
+  display: false
+
+
 cache:
   enabled: true
-  prefix: 'morfy'
+  prefix: morfy
   driver: auto
   lifetime: 604800
-
-session:
-  enabled: true

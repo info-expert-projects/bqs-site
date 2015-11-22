@@ -16,7 +16,7 @@
       "issues": "https://github.com/morfy-cms/morfy/issues"
     },
     "require": {
-        "php": ">=5.3.2",
+        "php": ">=5.5",
         "fenom/fenom": "2.8.*",
         "fenom/storage": "1.*",
         "erusev/parsedown-extra": "0.7.*",
@@ -32,13 +32,13 @@
     },
     "autoload": {
         "classmap": [
-            "libraries/Morfy/"
+            "morfy"
         ],
         "files": [
-            "libraries/Morfy/boot/defines.php",
-            "libraries/Morfy/boot/shortcodes.php",
-            "libraries/Morfy/boot/filters.php",
-            "libraries/Morfy/boot/actions.php"
+            "morfy/boot/defines.php",
+            "morfy/boot/shortcodes.php",
+            "morfy/boot/filters.php",
+            "morfy/boot/actions.php"
         ]
     }
 }

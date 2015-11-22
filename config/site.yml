@@ -4,9 +4,3 @@ title: 'Bitrix Qiuck Start'
 description: 'Быстрый старт для Bitrix'
 author:
   email: 'pafnuty10@gmail.com'
-
-# Site Plugins
-plugins:
-  less
-  breadcrumb
-  asset

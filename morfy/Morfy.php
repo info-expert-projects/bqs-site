@@ -26,7 +26,7 @@ class Morfy
      *
      * @var string
      */
-    const VERSION = '2.X.X';
+    const VERSION = '2.0.0';
 
     /**
      * Protected clone method to enforce singleton behavior.
@@ -51,8 +51,10 @@ class Morfy
         // Turn on output buffering
         ob_start();
 
-        // Send default header and set internal encoding
-        header('Content-Type: text/html; charset='.Config::get('system.charset'));
+        // Display Errors
+        Config::get('system.errors.display') and error_reporting(-1);
+
+        // Set internal encoding
         function_exists('mb_language') and mb_language('uni');
         function_exists('mb_regex_encoding') and mb_regex_encoding(Config::get('system.charset'));
         function_exists('mb_internal_encoding') and mb_internal_encoding(Config::get('system.charset'));
@@ -66,14 +68,17 @@ class Morfy
         // Init Cache
         Cache::init();
 
-        // Init Template
-        Template::init();
-
         // Init Plugins
         Plugins::init();
 
+        // Init Blocks
+        Blocks::init();
+
         // Init Pages
         Pages::init();
+
+        // Flush (send) the output buffer and turn off output buffering
+        ob_end_flush();
     }
 
     /**

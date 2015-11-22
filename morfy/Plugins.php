@@ -36,22 +36,43 @@ class Plugins
      */
     protected function __construct()
     {
-        // Create Unique Cache ID for Plugins
-        $plugins_cache_id = md5('plugins' . ROOT_DIR . PLUGINS_PATH . filemtime(PLUGINS_PATH));
+        $plugins_cache_id = '';
+
+        // Get Plugins List
+        $plugins_list = Config::get('system.plugins');
+
+        // If Plugins List isnt empty then create plugin cache ID
+        if (is_array($plugins_list) && count($plugins_list) > 0) {
+
+            // Go through...
+            foreach ($plugins_list as $plugin) {
+                if (File::exists($_plugin = PLUGINS_PATH . '/' . $plugin . '/' . $plugin . '.yml')) {
+                    $plugins_cache_id .= filemtime($_plugin);
+                }
+            }
+
+            // Create Unique Cache ID for Plugins
+            $plugins_cache_id = md5('plugins' . ROOT_DIR . PLUGINS_PATH . $plugins_cache_id);
+        }
 
         // Get plugins list from cache or scan plugins folder and create new plugins cache item
         if (Cache::driver()->contains($plugins_cache_id)) {
             Config::set('plugins', Cache::driver()->fetch($plugins_cache_id));
         } else {
-            $plugins_list = File::scan(PLUGINS_PATH, 'yml');
 
-            foreach ($plugins_list as $plugin_config) {
-                $_plugins_config[File::name($plugin_config)] = Yaml::parseFile($plugin_config);
+            // If Plugins List isnt empty
+            if (is_array($plugins_list) && count($plugins_list) > 0) {
+
+                // Go through...
+                foreach ($plugins_list as $plugin) {
+                    if (File::exists($_plugin = PLUGINS_PATH . '/' . $plugin . '/' . $plugin . '.yml')) {
+                        $_plugins_config[File::name($_plugin)] = Yaml::parseFile($_plugin);
+                    }
+                }
+
+                Config::set('plugins', $_plugins_config);
+                Cache::driver()->save($plugins_cache_id, $_plugins_config);
             }
-
-            Config::set('plugins', $_plugins_config);
-
-            Cache::driver()->save($plugins_cache_id, $_plugins_config);
         }
 
         // Include enabled plugins
