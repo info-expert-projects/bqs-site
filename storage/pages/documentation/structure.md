@@ -20,10 +20,12 @@ template: index
 auth/
 bitrix/
 └── php_interface/
-    ├── this_site_support.php
-    └── site_closed.php
+    └── include/
+        └── site_closed.php
+    └── this_site_support.php
 favicons/
 includes/
+    pages/
 local/ 
 ├── codenails/
 │   ├── css/
@@ -64,7 +66,7 @@ robots.txt
 ##bitrix/php_interface/{#php_interface}
 - **this_site_support.php** — Информация о партнёре и техподдержке (нужна по требованиям монитора качества). Отображается внизу формы авторизации в админке. Этот файл не подхватывается из local, возможно со временем это исправят.
 ![Информация о поддержке и партнёре](https://dl.dropboxusercontent.com/u/8142395/this_site_support.png "Информация о поддержке и партнёре"){.col-margin}
-- **site_closed.php** — [Красивая заглушка](http://jsfiddle.net/eoq287rd/embedded/result/) для отключенной публички. К сожалению пока этот файл не подхватывается из папки local.
+- **include/site_closed.php** — [Красивая заглушка](http://jsfiddle.net/eoq287rd/embedded/result/) для отключенной публички. К сожалению пока этот файл не подхватывается из папки local.
 
 ## favicons/{#favicons}
 
