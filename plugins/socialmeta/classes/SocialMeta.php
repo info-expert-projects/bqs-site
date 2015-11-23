@@ -26,11 +26,11 @@ class SocialMeta {
 		$noimage    = Url::getBase() . $noimage;
 
 		// Задаём папку  для загрзки картинок по умолчанию.
-		$uploadDir = '/social/';
+		$uploadDir = '/storage/social/';
 
 		// Задаём папку для картинок
 		$imageDir = $uploadDir . $size . '/';
-		$dir      = STORAGE_PATH . $imageDir;
+		$dir      = ROOT_DIR . $imageDir;
 
 		// $data     = stripslashes($data);
 		$arImages = array();
@@ -79,7 +79,7 @@ class SocialMeta {
 						$imgResized = $urlShort;
 						// Если не внешняя картинка — подставляем корневю дирректорию, чтоб ресайзер понял что ему дают.
 						if (!$isRemote) {
-							$imgResized = STORAGE_PATH . $urlShort;
+							$imgResized = ROOT_DIR . $urlShort;
 						}
 						// Определяем новое имя файла
 						$fileName = $size . '_' . $resizeType . '_' . strtolower(basename($imgResized));

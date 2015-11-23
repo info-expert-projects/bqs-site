@@ -1,0 +1,15 @@
+name: Thumb Plugin
+version: 1.0.0
+description: "Thumb generation plugin for Morfy CMS"
+author:
+  name: Pavel Belousov
+  email: pafnuty10@gmail.com
+  url: http://pafnuty.name
+homepage: https://github.com/pafnuty-morfy-plugins/morfy-plugin-thumb
+bugs: https://github.com/pafnuty-morfy-plugins/morfy-plugin-thumb/issues
+license: MIT
+
+# Plugin settings
+enabled: true
+loadcss: true
+loadjs: true
