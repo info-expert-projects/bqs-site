@@ -19,7 +19,7 @@ template: index
 
 В быстрый страрт по умолчанию включены следующие библиотеки для удобства разработки:
 
-для форм:
+для работы с формами:
 - `cn.custom.form`
 - `jquery.form.min` - Подробнее о плагине тут: [form](https://github.com/malsup/form#copyright-and-license)
 
