@@ -19,10 +19,10 @@ template: index
 ```md
 auth/
 bitrix/
-└── php_interface/
-    └── include/
-        └── site_closed.php
-    └── this_site_support.php
+├── php_interface/
+│   ├── this_site_support.php
+│   └── include/
+│         └── site_closed.php
 favicons/
 includes/
     pages/
