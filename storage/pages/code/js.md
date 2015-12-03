@@ -31,6 +31,15 @@ template: index
 - Открывающая фигурная скобка находится на одной строке.
 - Закрывающая фигурная скобка располагается на следующей строке.
 
+Используйте одинарные кавычки для строк. Тогда html-код не будет различаться в js и html.
+```js
+// Плохо
+var html = "<div class='my-class'></div>";
+
+// Хорошо
+var html = '<div class="my-class"></div>';
+```
+
 ### [Переменные](#vars){#vars}
 
 
@@ -97,4 +106,13 @@ if (foo = bar) {
 - `jquery.matchHeight-min` - для блоков одной высоты, часто используется в каталоге. Подробнее о плагине тут: [Magnific Popup](http://brm.io/jquery-match-height/)
 - `-jquery.nicecode.min` - для удобной и красивой распечатки массивов и разных данных
 
-## Инструменты для автоформатирования кода, настройка параметров
+---
+## [Инструменты для автоформатирования кода, настройка параметров](#tools){#tools .h3}
+---
+
+#### [Плагины для SublimeText](#stplugins){#stplugins}
+- [jsFormat](https://packagecontrol.io/packages/JsFormat) — плагин для форматирования js-кода.
+- [jQuery bundle](https://packagecontrol.io/packages/jQuery) — подсветка синтаксиса и сниппеты для jQuery.
+- [JavaScript Completions](https://packagecontrol.io/packages/JavaScript%20Completions) — Автокомплит для js-функций и методов.
+- [JSHint](https://packagecontrol.io/packages/JSHint) — Удобный и наглядный плагин для проверки корректности js-кода.
+- [Minify](https://packagecontrol.io/packages/Minify) — Плагин для минификации js/html/css кода.
