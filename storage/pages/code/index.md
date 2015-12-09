@@ -6,16 +6,16 @@ template: index
 ---
 
 # Организация кода
-
-<div class="tip">
-    :construction: Страница не закончена. <a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/index.md" class="btn btn-small" target="_blank">Редактировать</a>
-</div>
+<a href="https://github.com/pafnuty/bqs-site/blob/dev/storage/pages/code/index.md" class="btn btn-mini" target="_blank">Редактировать эту страницу</a>
 
 <div class="alert alert-error fz18 mt20">
-    Основной принцип — код должен выглядеть так, как будто его писал один человек, независимо от количества авторов!
+   :exclamation: Основной принцип — код должен выглядеть так, как будто его писал один человек, независимо от количества авторов!
 </div>
+Именно по этой причине следует строго придерживаться стиля оформления, описанного в этом разделе.
 
-## [PHP-код](/code/php)
-## [HTML-код](/code/html)
-## [JS-код](/code/js)
-## [LESS-код](/code/css)
+Для ознакомления с требованиями по стилю кода прейдите в нужный раздел:
+
+[PHP](/code/php){.btn .btn-outline .mb10}
+[HTML](/code/html){.btn .btn-outline .mb10}
+[JS](/code/js){.btn .btn-outline .mb10}
+[LESS](/code/css){.btn .btn-outline .mb10}
