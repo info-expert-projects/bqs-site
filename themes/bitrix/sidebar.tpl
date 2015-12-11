@@ -6,9 +6,9 @@
 			{set $slug = Url::getUriSegment(0)}
 			{set $slugChild = Url::getUriSegment(1)}
 			{set $home = Url::getBase()}
-			<li {if $slug == ''} class="active" {/if}>
+			{* <li {if $slug == ''} class="active" {/if}>
 				<a href="{$home}">Главная</a>
-			</li>
+			</li> *}
 			{* <li {if $slug == 'blog'} class="active" {/if}>
 				<a href="{$home}/blog">Блог</a>
 			</li> *}
