@@ -40,9 +40,9 @@
 					<li {if $slugChild == 'css'} class="active" {/if}>
 						<a href="{$home}/code/css">LESS и CSS код</a>
 					</li>
-					<li {if $slugChild == 'folders'} class="active" {/if}>
+					{* <li {if $slugChild == 'folders'} class="active" {/if}>
 						<a href="{$home}/code/folders">Файлы и папки</a>
-					</li>
+					</li> *}
 				</ul>
 			</li>
 			
