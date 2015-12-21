@@ -210,3 +210,47 @@ alias get='git '
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
 ```
+
+### Глобальные настройки
+Чтобы опредилть настройки Git глобально их можно прописать в файл .gitconfig.
+
+ - для win ищет файл .gitconfig в каталоге $HOME (C:\Documents and Settings\$USER или C:\Users\$USER для большинства пользователей)
+ - для unix ~/.gitconfig для конкретного пользователя или /etc/gitconfig для всех пользователей
+
+Пример файла:
+```
+[user]
+# Логин и почта, использующиеся на github:
+	name = username (User Name)
+	email = email@mail.com
+# Редактор, открывающий сообщения по умолчанию (должен быть прописан в PATH)
+[core]
+	editor = subl
+# Цветова схема для вывода консоли	
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+# Алиасы
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log --oneline --graph --decorate
+
+# Стратегия слияния при git push
+[merge]
+    conflictstyle = diff3
+```
