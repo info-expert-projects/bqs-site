@@ -21,7 +21,9 @@
 					<li {if $slugChild == 'less'} class="active" {/if}>
 						<a href="{$home}/documentation/less">LESS</a>
 					</li>
-
+					<li {if $slugChild == 'composite'} class="active" {/if}>
+						<a href="{$home}/documentation/composite">Композит</a>
+					</li>
 				</ul>
 			</li>
 
