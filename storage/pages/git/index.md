@@ -214,7 +214,7 @@ alias get='git '
 ### Глобальные настройки
 Чтобы опредилть настройки Git глобально их можно прописать в файл .gitconfig.
 
- - для win ищет файл .gitconfig в каталоге $HOME (C:\Documents and Settings\$USER или C:\Users\$USER для большинства пользователей)
+ - для win файл .gitconfig лежит в каталоге $HOME (C:\Documents and Settings\$USER или C:\Users\$USER для большинства пользователей)
  - для unix ~/.gitconfig для конкретного пользователя или /etc/gitconfig для всех пользователей
 
 Пример файла:
@@ -223,10 +223,12 @@ alias get='git '
 # Логин и почта, использующиеся на github:
 	name = username (User Name)
 	email = email@mail.com
+	
 # Редактор, открывающий сообщения по умолчанию (должен быть прописан в PATH)
 [core]
 	editor = subl
-# Цветова схема для вывода консоли	
+	
+# Цветовая схема для вывода консоли	
 [color "branch"]
     current = yellow reverse
     local = yellow
