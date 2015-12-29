@@ -9,9 +9,10 @@
 		
 		{Action::run('theme_meta')}
 
-		<link rel="shortcut icon" href="/favicon.ico?v=1">
-
 		<title>{$title}</title>
+		
+		{insert 'favicons.tpl'}
+
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;text=Bitrix+Quick+Start" rel="stylesheet">
 		<style>
 			html, body {
