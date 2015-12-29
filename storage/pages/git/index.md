@@ -183,8 +183,10 @@ alias gp='git push'
 alias got='git '
 alias get='git '
 ```
-Теперь можно настроить алиасы для конкретного проекта. Для этого идём в папку `.git` проекта, открываем файл `config`  и в конец дописываем:
-```
+
+Так же можно настроить алиасы для конкретного проекта. 
+Для этого идём в папку `.git` проекта, открываем файл `config`  и в конец дописываем:
+```bash
 [alias]
     # one-line log
     l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
