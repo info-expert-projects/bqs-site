@@ -17,5 +17,7 @@ twitter:
   # Default image for twitter (min 600x330px) see the /storage/images/morfy-twitter.psd
   noimage: /storage/images/600t.png
 facebook:
+  # see: https://developers.facebook.com/apps
+  app_id: 1056946874337097
   # Default image for facebook (min 600x315px) see the /storage/images/morfy-fb.psd
   noimage: /storage/images/600f.png

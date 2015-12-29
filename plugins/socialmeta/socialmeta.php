@@ -48,7 +48,10 @@ Action::add(
 			'og:title'       => $title,
 			'og:description' => $description,
 			'og:image'       => $facebookImage,
+			'fb:app_id'      => (strlen($config['facebook']['app_id'])) ? $config['facebook']['app_id'] : '',
 		];
+
+		$arFacebook = array_filter($arFacebook);
 
 		foreach ($arTwitter as $name => $content) {
 			echo '<meta name="' . $name . '" content="' . $content . '">';
