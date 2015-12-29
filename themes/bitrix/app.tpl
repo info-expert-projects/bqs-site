@@ -10,6 +10,7 @@
 		{Action::run('theme_meta')}
 
 		<link rel="shortcut icon" href="/favicon.ico?v=1">
+		{insert 'favicons.tpl'}
 
 		<title>{$title}{if Url::getUriSegment(0) != ''} | {$config.site.title}{/if}</title>
 
