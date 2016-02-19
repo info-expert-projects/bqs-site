@@ -63,15 +63,9 @@ template: index
 Решение проблемы очень простое — **достаточно "дождаться", когда ajax-контент динамических областей подгрузится**.
 ```js
 if (window.frameCacheVars !== undefined) {
-    BX.addCustomEvent("onFrameDataReceived", function (json) {
-        // Все динамические области загружены при композитном хите.
-        runFunction();
-    });
+    BX.addCustomEvent("onFrameDataReceived", runFunction);
 } else {
-    jQuery(document).ready(function ($) {
-        // Тут произошел обычный, не композитный хит.
-        runFunction();
-    });
+    $(runFunction);
 }
 
 function runFunction() {
